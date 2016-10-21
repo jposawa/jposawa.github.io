@@ -50,7 +50,11 @@
 	#formLogin
 	{
 		padding-top:7%;
-		margin-left:5%;
+	}
+
+	#formLogin p2
+	{
+		padding-left:10%;
 	}
 
 	#formLogin input
@@ -185,10 +189,10 @@
 		<form id="formLogin" name="loginForm" method="post" action="https://si3.ufc.br/sigaa/logar.do?dispatch=logOn">
 		
 			<!--O value="" é para garantir que a informação não apareça com o autocompletar do navegador-->
-			<p>Usuário:</p>
+			<p2>Usuário:</p2>
 			<p><input class="logar"type="text" name="user.login" size="20" value="" placeholder="Usuário"></p>
 			<!--O value="" é para garantir que a informação não apareça com o autocompletar do navegador-->					
-			<p>Senha:</p>
+			<p2>Senha:</p2>
 			<p><input class="logar" type="password" name="user.senha" size="20" value="" placeholder="Senha"> </p><br>
 			
 			<input id="entre" type="submit" name="entrar" value="Entrar">
