@@ -2,84 +2,170 @@
 <html>
 <head>
 	<!--meta charset="ISO-8859"-->
-  <meta charset = "UTF-8">
+	<meta charset = "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Pragma" content="no-cache">
-<title>SIGAAln - Livre de Navegadores</title>
+	<title>SIGAAln - Livre de Navegadores</title>
 
-<link rel="shortcut icon" href="https://si3.ufc.br/shared/img/brasao.ico">
+	<link rel="shortcut icon" href="https://si3.ufc.br/shared/img/brasao.ico">
 
 <style>
-*
+@media screen and (min-width: 320px)
 {
-	font-family:sans-serif;
-	padding:0;
-	margin:0;
-	font-size:100%;
-	box-sizing:border-box;
-	text-decoration:none;
-	transition: all 0.3s;
-	box-sizing: border-box;
+	*
+	{
+		font-family:sans-serif;
+		padding:0;
+		margin:0;
+		font-size:100%;
+		box-sizing:border-box;
+		text-decoration:none;
+		transition: all 0.3s;
+		box-sizing: border-box;
+	}
+
+	body
+	{
+		background:#ddd;
+	}
+
+	#corpo
+	{
+		position:absolute;
+		top:2%;
+		left:5%;
+		width:90%;
+		text-align:justify;
+		padding:1%;
+		background:#fff;
+		box-shadow: 0 0 10px #333;
+	}
+
+	#saudacao h1
+	{
+		text-align:center;
+		padding-bottom:5%;
+	}
+
+	#formLogin
+	{
+		padding-top:7%;
+		margin-left:5%;
+	}
+
+	#formLogin input
+	{
+		font-size:140%;
+		border:none;
+		background:#36a;
+		color:#eee;
+		padding:0.2%;
+	}
+
+	#formLogin input:focus
+	{
+		box-shadow: 0 0 15px #fff inset;
+		color:#fff;
+	}
+
+	#formLogin input[type=submit]
+	{
+		font-size:150%;
+	}
+
+	#formLogin input[type=submit]:hover,#formLogin input[type=submit]:focus
+	{
+		box-shadow:none;
+		background:#246;
+		color:#fff;
+	}
+
+	#formLogin input::-webkit-input-placeholder
+	{
+		color:#eee;
+	}
+
+	#formLogin input[type=submit]
+	{
+		padding: 0.1% 0.3% 0.1% 0.2%;
+		cursor:pointer;
+	}
 }
 
-body
+@media screen and (min-width: 1280px)
 {
-	background:#ddd;
-}
+	*
+	{
+		font-family:sans-serif;
+		padding:0;
+		margin:0;
+		font-size:100%;
+		box-sizing:border-box;
+		text-decoration:none;
+		transition: all 0.3s;
+		box-sizing: border-box;
+	}
 
-#corpo
-{
-	position:absolute;
-	top:5%;
-	left:13%;
-	width:74%;
-	text-align:justify;
-	padding:1%;
-	background:#fff;
-	box-shadow: 0 0 10px #333;
-}
+	body
+	{
+		background:#ddd;
+	}
 
-#saudacao h1
-{
-	text-align:center;
-	padding-bottom:5%;
-}
+	#corpo
+	{
+		position:absolute;
+		top:5%;
+		left:13%;
+		width:74%;
+		text-align:justify;
+		padding:1%;
+		background:#fff;
+		box-shadow: 0 0 10px #333;
+	}
 
-#formLogin
-{
-	padding-top:2%;
-	margin-left:40%;
-}
+	#saudacao h1
+	{
+		text-align:center;
+		padding-bottom:5%;
+	}
 
-#formLogin input
-{
-	border:none;
-	background:#36a;
-	color:#eee;
-	padding:0.2%;
-}
+	#formLogin
+	{
+		padding-top:2%;
+		margin-left:40%;
+	}
 
-#formLogin input:focus
-{
-	box-shadow: 0 0 15px #fff inset;
-	color:#fff;
-}
+	#formLogin input
+	{
+		border:none;
+		background:#36a;
+		color:#eee;
+		padding:0.2%;
+	}
 
-#formLogin input[type=submit]:hover,#formLogin input[type=submit]:focus
-{
-	box-shadow:none;
-	background:#246;
-	color:#fff;
-}
+	#formLogin input:focus
+	{
+		box-shadow: 0 0 15px #fff inset;
+		color:#fff;
+	}
 
-#formLogin input::-webkit-input-placeholder
-{
-	color:#eee;
-}
+	#formLogin input[type=submit]:hover,#formLogin input[type=submit]:focus
+	{
+		box-shadow:none;
+		background:#246;
+		color:#fff;
+	}
 
-#formLogin input[type=submit]
-{
-	padding: 0.1% 0.3% 0.1% 0.2%;
-	cursor:pointer;
+	#formLogin input::-webkit-input-placeholder
+	{
+		color:#eee;
+	}
+
+	#formLogin input[type=submit]
+	{
+		padding: 0.1% 0.3% 0.1% 0.2%;
+		cursor:pointer;
+	}
 }
 
 </style>
