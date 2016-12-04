@@ -1,0 +1,111 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <!--script src="angular.min.js"></script PARA USO LOCAL-->
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.min.js"></script-->
+    <link href="estetica.css" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="google-site-verification" content="ZQwU21CRmt6D5sj1eY5WMS4cnPiKRAwV-TdcqItvRXI" />
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    <script src="jquery-2.1.4.min.js"></script> <!--PARA USO LOCAL-->
+    <script src="jquery.session.js"></script>
+    <script src="js.cookie.js"></script>
+    <script type="text/javascript" src="comportamento.js"></script>
+    <title>Space Clash</title>
+</head>
+
+<body>
+
+<div id="ConfigCarta">
+	<div class="DefineAtributos">
+		<p>ATRIBUTOS</p>
+		<p><input id="attrDis" type="number" min="0" placeholder="Dis" title="Disparo" max="10"></p><br>
+		<p><input id="attrAlc" type="number" min="0" placeholder="Alc" title="Alcance" max="10"></p><br>
+		<p><input id="attrEsc" type="number" min="0" placeholder="Esc" title="Escudos" max="10"></p><br>
+		<p><input id="attrBli" type="number" min="0" placeholder="Bli" title="Blindagem" max="10"></p><br>
+		<p><input id="attrVel" type="number" min="0" placeholder="Vel" title="Velocidade" max="10"></p><br>
+		<p><input id="attrTro" type="number" min="0" placeholder="Tro" title="Tropas" max="10"></p>
+	</div>
+
+	<div class="DefineTipoENome">
+		<select id="attrFac">
+			<option value="">Facção</option>
+			<option value="CI">Conglomerado Independente (CI)</option>
+			<option value="OTU">Organização Terráquea Unificada (OTU)</option>
+			<option value="Davok">Davok</option>
+			<option value="Nayan">Concílio Nayan</option>
+		</select>
+		<br><br>
+		<select id="attrTipo">
+			<option value="">Tipo de Carta</option>
+			<!--Unidades-->
+			<option value="Caça">Caça</option>
+			<option value="Canhoneira">Canhoneira</option>
+			<option value="Corveta">Corveta</option>
+			<option value="Fragata">Fragata</option>
+			<!--Unidades-->
+			<option value="Tecnologia">Tecnologia</option>
+			<option value="Manobra">Manobra</option>
+			<option value="Ação Instantânea">Ação Instantânea</option>
+		</select><br>
+		<br>
+		<input id="attrNome" type="text" placeholder="Nome" title="Nome da Carta">
+	</div>
+
+	<div class="DefineCustos">
+		<input id="custoBytes" type="number" min="0" placeholder="Custo(B)" title="Custo(B)">
+		<input id="custoCreditos" class="cantoDireito" type="number" min="0" placeholder="Custo(₢)" title="Custo(₢)">
+	</div>
+</div>
+
+<!--Formato da carta final-->
+<div id="FormatoCarta">
+
+	<div id="ColunaEsquerda">
+		<p class="valorAtr bordaAtr disparos">
+			
+		</p><br>
+		<p class="valorAtr bordaAtr alcance">
+			
+		</p><br>
+		<p class="valorAtr bordaAtr escudos">
+			
+		</p><br>
+		<p class="valorAtr bordaAtr blindagem">
+			
+		</p><br>
+		<p class="valorAtr bordaAtr velocidade">
+			
+		</p><br>
+		<p class="valorAtr bordaAtr tropas">
+			
+		</p>
+	</div>
+
+	<div id="ImagemCentro">
+		<input type="text" id="linkImagem" placeholder="URL Imagem (Melhor com fundo transparente)">
+		<img id="imagemCarta" src="">
+	</div>
+
+	<div id="ColunaTexto">
+		<textarea id="attrTxt" placeholder="Texto da carta"></textarea>
+		<p id="textoCarta">Texto Carta</p>
+	</div>
+
+	<div id="LinhaCustos">
+		<p class="valorCusto bordaCusto bytes">Largura Banda TB</p>
+		<p class="faccao">Facção</p>
+		<p class="valorCusto bordaCusto2 creditos">Créditos ₢</p>
+	</div>
+
+	<div id="LinhaNome">
+		TIPO - NOME
+	</div>
+</div>
+
+<div id="ControlePagina">
+	<button name="GerarCarta" onclick="gerarCarta()">Gerar Carta</button>
+</div>
+</body>
+</html>
