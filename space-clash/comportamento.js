@@ -37,5 +37,18 @@ function gerarCarta()
 
 	//Coloca Imagem
 	imagemCarta.src = linkImagem.value;
+}
 
+function switchTexto(x)
+{
+	if(janelaTexto.style.height == 0 || janelaTexto.style.height == "0px")
+	{
+		janelaTexto.style.height = "10rem";
+		x.innerHTML = "&#215;";
+	}
+	else
+	{
+		janelaTexto.style.height = 0;
+		x.innerHTML = "Instruções";
+	}
 }

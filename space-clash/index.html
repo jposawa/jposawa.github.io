@@ -12,10 +12,21 @@
     <script src="jquery.session.js"></script>
     <script src="js.cookie.js"></script>
     <script type="text/javascript" src="comportamento.js"></script>
-    <title>Space Clash</title>
+    <title>Space Clash - Gerador de cartas</title>
 </head>
 
 <body>
+<div id=textosGerais>
+	<button onclick="switchTexto(this)">Instruções</button>
+	<div id="janelaTexto">
+		<!--button onclick="switchTexto()">&#215;</button-->
+		Esse gerador de cartas está em fase inicial. Por enquanto ele não salva nenhuma informação e qualquer reload elas serão apagadas.<br>
+		Portanto é recomendado que ao criar a carta, tire um print e corte a imagem da carta. Ela deve possuir dimensões de 675 x 450.<br>
+		<br>
+		O texto lateral aceita comandos HTML básicos, como o < b > para negrito...<br>
+		Além disso, é Altamente recomendado que a imagem de ilustração da carta seja uma imagem com <b>fundo transparente</b>.<br>
+	</div>
+</div>
 
 <div id="ConfigCarta">
 	<div class="DefineAtributos">

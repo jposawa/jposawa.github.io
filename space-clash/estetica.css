@@ -43,6 +43,27 @@ input:focus
 /*RESETS*/
 
 /*ESTRUTURA GERAL*/
+#textosGerais
+{
+	position:absolute;
+	text-align:left;
+	width:80%;
+	margin-top:2%;
+	left:10%;
+	z-index:10;
+}
+
+#janelaTexto
+{
+	text-align:center;
+	background:rgba(80,80,80,0.8);
+	color:#eee;
+	height:0;
+	max-height:auto;
+	overflow:hidden;
+	z-index:10;
+}
+
 #FormatoCarta
 {
 	position:absolute;
