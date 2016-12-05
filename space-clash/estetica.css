@@ -177,7 +177,7 @@ input:focus
 	position:absolute;
 	margin:0;
 	text-align:center;
-	padding-top:13%;
+	padding-top:15%;
 }
 
 .valorAtr input
@@ -190,7 +190,7 @@ input:focus
 	position:absolute;
 	margin-top:60%;
 	left:20%;
-	border:2px solid #59e;
+	border:0px solid #59e;
 	height:10%;
 	border-radius:50%;
 }
@@ -252,15 +252,21 @@ input:focus
 .DefineAtributos
 {
 	position:absolute;
+	width:20%;
 	top:30%;
-	left:5%;
+	left:0;
+	text-align:right;
+}
+.DefineAtributos input
+{
+	width:20%;
 }
 
 .DefineTipoENome
 {
 	position:absolute;
-	top:65%;
-	left:5%;
+	top:75%;
+	left:9%;
 }
 
 .DefineTipoENome input, .DefineTipoENome select
@@ -273,7 +279,7 @@ input:focus
 	position:absolute;
 	display: inline-block;
 	width:35%;
-	bottom:23%;
+	top:85%;
 	left:32.5%;
 	padding: 0 0 0 4%;
 }
@@ -289,5 +295,49 @@ input:focus
 	margin-left:27%;
 }
 
+
+/*Imagens Atributos*/
+.disparos
+{
+	background: url("https://dl.dropboxusercontent.com/u/68292535/Jogos/spaceClash/Disparos1.png") no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.alcance
+{
+	background: url("https://dl.dropboxusercontent.com/u/68292535/Jogos/spaceClash/Alcance.png") no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.escudos
+{
+	background: url("https://dl.dropboxusercontent.com/u/68292535/Jogos/spaceClash/Escudos1.png") no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.blindagem
+{
+	background: url("https://dl.dropboxusercontent.com/u/68292535/Jogos/spaceClash/Blindagem.png") no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.velocidade
+{
+	background: url("https://dl.dropboxusercontent.com/u/68292535/Jogos/spaceClash/Velocidade.png") no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.tropas
+{
+	background: url("https://dl.dropboxusercontent.com/u/68292535/Jogos/spaceClash/Tropas.png") no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+/*Imagens Atributos*/
 /*----------------------------------------------*/
 /*ESTRUTURA GERAL*/

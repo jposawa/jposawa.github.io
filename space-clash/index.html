@@ -31,12 +31,19 @@
 <div id="ConfigCarta">
 	<div class="DefineAtributos">
 		<p>ATRIBUTOS</p>
-		<p><input id="attrDis" type="number" min="0" placeholder="Dis" title="Disparo" max="10"></p><br>
-		<p><input id="attrAlc" type="number" min="0" placeholder="Alc" title="Alcance" max="10"></p><br>
-		<p><input id="attrEsc" type="number" min="0" placeholder="Esc" title="Escudos" max="10"></p><br>
-		<p><input id="attrBli" type="number" min="0" placeholder="Bli" title="Blindagem" max="10"></p><br>
-		<p><input id="attrVel" type="number" min="0" placeholder="Vel" title="Velocidade" max="10"></p><br>
-		<p><input id="attrTro" type="number" min="0" placeholder="Tro" title="Tropas" max="10"></p>
+		<p>Disparos: <input id="attrDis" type="number" min="0" placeholder="Dis" title="Disparo" max="10"></p><br>
+		<p>
+			Alcance: 
+			<select id="attrAlc">
+				<option value="C">Curto</option>
+				<option value="M">Médio</option>
+				<option value="L">Longo</option>
+			</select>
+		</p><br>
+		<p>Escudos: <input id="attrEsc" type="number" min="0" placeholder="Esc" title="Escudos" max="10"></p><br>
+		<p>Blindagem: <input id="attrBli" type="number" min="0" placeholder="Bli" title="Blindagem" max="10"></p><br>
+		<p>Velocidade: <input id="attrVel" type="number" min="0" placeholder="Vel" title="Velocidade" max="10"></p><br>
+		<p>Tropas: <input id="attrTro" type="number" min="0" placeholder="Tro" title="Tropas" max="10"></p>
 	</div>
 
 	<div class="DefineTipoENome">
@@ -74,24 +81,17 @@
 <div id="FormatoCarta">
 
 	<div id="ColunaEsquerda">
-		<p class="valorAtr bordaAtr disparos">
-			
-		</p><br>
-		<p class="valorAtr bordaAtr alcance">
-			
-		</p><br>
-		<p class="valorAtr bordaAtr escudos">
-			
-		</p><br>
-		<p class="valorAtr bordaAtr blindagem">
-			
-		</p><br>
-		<p class="valorAtr bordaAtr velocidade">
-			
-		</p><br>
-		<p class="valorAtr bordaAtr tropas">
-			
-		</p>
+		<p class="valorAtr bordaAtr disparos"></p>
+		<br>
+		<p class="valorAtr bordaAtr alcance"></p>
+		<br>
+		<p class="valorAtr bordaAtr escudos"></p>
+		<br>
+		<p class="valorAtr bordaAtr blindagem"></p>
+		<br>
+		<p class="valorAtr bordaAtr velocidade"></p>
+		<br>
+		<p class="valorAtr bordaAtr tropas"></p>
 	</div>
 
 	<div id="ImagemCentro">
@@ -105,7 +105,7 @@
 	</div>
 
 	<div id="LinhaCustos">
-		<p class="valorCusto bordaCusto bytes">Largura Banda TB</p>
+		<p class="valorCusto bordaCusto bytes">Frequência THz</p>
 		<p class="faccao">Facção</p>
 		<p class="valorCusto bordaCusto2 creditos">Créditos ₢</p>
 	</div>
