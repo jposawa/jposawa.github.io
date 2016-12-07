@@ -249,23 +249,10 @@ input:focus
 	padding-left:0.2%;
 }
 
-.DefineAtributos
-{
-	position:absolute;
-	width:20%;
-	top:30%;
-	left:0;
-	text-align:right;
-}
-.DefineAtributos input
-{
-	width:20%;
-}
-
 .DefineTipoENome
 {
 	position:absolute;
-	top:75%;
+	top:20%;
 	left:9%;
 }
 
@@ -273,6 +260,19 @@ input:focus
 {
 	width:60%;
 } 
+
+.DefineAtributos
+{
+	position:absolute;
+	width:20%;
+	top:35%;
+	left:0;
+	text-align:right;
+}
+.DefineAtributos input
+{
+	width:20%;
+}
 
 .DefineCustos
 {
