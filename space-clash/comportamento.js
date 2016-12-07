@@ -98,7 +98,14 @@ function gerarCarta()
 	$("#LinhaNome").html("<b>"+attrTipo.value+"</b> - "+attrNome.value);
 
 	//Coloca Custos e Facção
-	$(".bytes").html(custoBytes.value+" THz");
+	if(custoBytes.value < 1)
+	{
+		$(".bytes").html("X")
+	}
+	else
+	{
+		$(".bytes").html(custoBytes.value+" THz");
+	}
 
 	if(custoCreditos.value < 1)
 	{
@@ -108,6 +115,7 @@ function gerarCarta()
 	{
 		$(".creditos").html(custoCreditos.value+"₢");
 	}
+
 	$(".faccao").html(attrFac.value);
 
 	//Aloca Atributos
