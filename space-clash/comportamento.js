@@ -127,7 +127,7 @@ function gerarCarta()
 	$(".tropas").html(attrTro.value);
 
 	//Coloca Texto
-	$("#textoCarta").html(attrTxt.value);
+	$("#textoCarta").html(attrTxt.value.replace("\n","<br>"));
 
 	//Coloca Imagem
 	imagemCarta.src = linkImagem.value;
