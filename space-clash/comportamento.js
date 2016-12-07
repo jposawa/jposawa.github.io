@@ -16,12 +16,98 @@ $(document).ready(function()
 
 function gerarCarta()
 {
+	if(attrTipo.value == "" || attrTipo.value == null)
+	{
+		alert("Faltou selecionar tipo de carta");
+		attrTipo.focus();
+		return false;
+	}
+	else if (custoBytes.value == "" || custoBytes.value == null)
+	{
+		alert("Faltou definir custo de Frequência da carta");
+		custoBytes.focus();
+		return false;
+	}
+	else if(attrNome.value == "" || attrNome.value == null)
+	{
+		alert("Faltou definir o nome da carta");
+		attrNome.focus();
+		return false;
+	}
+	else if(custoCreditos.value == "" || custoCreditos.value == null)
+	{
+		alert("Faltou definir o custo de Créditos da carta");
+		custoCreditos.focus();
+		return false;
+	}
+	else if(attrFac.value == "" || attrFac.value == null)
+	{
+		alert("Faltou selecionar a facção da carta");
+		attrFac.focus();
+		return false;
+	}
+	else if(attrDis.value == "" || attrDis.value == null)
+	{
+		alert("Faltou definir o número de Disparos da carta");
+		attrDis.focus();
+		return false;
+	}
+	else if(attrAlc.value == "" || attrAlc.value == null)
+	{
+		alert("Faltou selecionar o Alcance da carta");
+		attrAlc.focus();
+		return false;
+	}
+	else if(attrEsc.value == "" || attrEsc.value == null)
+	{
+		alert("Faltou selecionar tipo de carta");
+		attrEsc.focus();
+		return false;
+	}
+	else if(attrBli.value == "" || attrBli.value == null)
+	{
+		alert("Faltou definir a Blindagem da carta");
+		attrBli.focus();
+		return false;
+	}
+	else if(attrVel.value == "" || attrVel.value == null)
+	{
+		alert("Faltou definir a Velocidade da carta");
+		attrVel.focus();
+		return false;
+	}
+	else if(attrTro.value == "" || attrTro.value == null)
+	{
+		alert("Faltou definir o número de Tropas da carta");
+		attrTro.focus();
+		return false;
+	}
+	else if(attrTxt.value == "" || attrTxt.value == null)
+	{
+		alert("Faltou definir o Texto da carta");
+		attrTxt.focus();
+		return false;
+	}
+	else if(linkImagem.value == "" || linkImagem.value == null)
+	{
+		alert("Faltou adicionar URL para imagem da carta");
+		linkImagem.focus();
+		return false;
+	}
 	//Coloca Tipo e Nome
 	$("#LinhaNome").html("<b>"+attrTipo.value+"</b> - "+attrNome.value);
 
 	//Coloca Custos e Facção
-	$(".bytes").html(custoBytes.value+"TB");
-	$(".creditos").html(custoCreditos.value+"₢");
+	$(".bytes").html(custoBytes.value+" THz");
+
+	if(custoCreditos.value < 1)
+	{
+		$(".creditos").html("X")
+	}
+	else
+	{
+		$(".creditos").html(custoCreditos.value+"₢");
+	}
 	$(".faccao").html(attrFac.value);
 
 	//Aloca Atributos
