@@ -134,7 +134,8 @@ input:focus
 	padding:1% 0.25% 0 0.5%;
 	width:94%;
 	height:29%;
-	border:2px solid #59e;
+	border:0px solid #59e;
+	background:rgba(55,65,75,0.95);
 	z-index:8;
 }
 
@@ -158,11 +159,12 @@ input:focus
 #LinhaCustos
 {
 	position:absolute;
-	bottom:0;
-	left:0;
-	width:100%;
+	bottom:0.1%;
+	left:1%;
+	width:98%;
 	height:4.7%;
-	border-top: 2px solid #59e;
+	border-top: 0px solid #59e;
+	background: rgba(30,45,45,1);
 	/*border-right: 2px solid #59e;
 	border-left: 2px solid #59e;*/
 	z-index:8;
@@ -172,12 +174,13 @@ input:focus
 {
 	position:absolute;
 	padding:1.5% 0 0 1%;
-	top:55.6%;
-	left:0;
-	width:100%;
+	width:94%;
 	height:5%;
-	border-top: 2px solid #59e;
-	border-bottom: 2px solid #59e;
+	top:55.6%;
+	left:3%;
+	border-top: 0px solid #59e;
+	border-bottom: 0px solid #59e;
+	background:rgba(50,65,80,0.95);
 	z-index:8;
 }
 
@@ -283,7 +286,11 @@ input:focus
 {
 	left:0;
 	border-right:0px solid #59e;
-	width:33%;
+	width:20%;
+	padding-top:1.5%;
+	background: url("https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/custoBanda.png") no-repeat;
+	background-size: contain;
+	background-position: center;
 }
 
 .bordaCusto2
@@ -291,6 +298,7 @@ input:focus
 	right:0;
 	border-left:0px solid #59e;
 	width:33%;
+	padding-top:1.5%;
 }
 
 #ControlePagina
@@ -364,6 +372,7 @@ input:focus
 
 
 /*Imagens Atributos*/
+
 .disparos
 {
 	background: url("https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/Disparos1.png") no-repeat;

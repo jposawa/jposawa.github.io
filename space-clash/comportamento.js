@@ -120,16 +120,51 @@ function gerarCarta()
 	var numFaccao = parseInt(attrFac.value);
 	//alert(numFaccao);
 
+	$(".faccao").html("");
 	switch(numFaccao)
 	{
+
+		/*
+		<option value="2">Conglomerado Independente (CI)</option>
+			<option value="1">Organização Terráquea Unificada (OTU)</option>
+			<option value="3">OTU/CI</option>
+			<option value="4">Davok</option>
+			<option value="5">Concílio Nayan</option>
+			<option value="6">Mercenário Livre</option>
+		*/
+
 		case 1: //Organização Terráquea Unida
 			//alert(numFaccao);
-			$(".faccao").html("");
-			$(".faccao").css("background", "url('https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/OTU.png') no-repeat");
-			$(".faccao").css("background-size", "contain");
-			$(".faccao").css("background-position", "center");
+			$(".faccao").css("background", "url('https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/OTU.png') no-repeat");		
 			break;
+
+		case 2: //Conglomerado Independente
+			$(".faccao").css("background", "url('https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/CI.png') no-repeat");
+			break;
+
+		case 3: //Organização Terráquea Unida ou Conglomerado Independente
+			//alert(numFaccao);
+			$(".faccao").css("background", "url('https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/OTU-CI.png') no-repeat");		
+			break;
+
+		case 4: //Davok
+			//alert(numFaccao);
+			$(".faccao").css("background", "url('https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/Davok.png') no-repeat");		
+			break;
+
+		case 5: //Nayan
+			//alert(numFaccao);
+			$(".faccao").css("background", "url('https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/Nayan.png') no-repeat");		
+			break;
+
+		case 6: //Organização Terráquea Unida
+			//alert(numFaccao);
+			$(".faccao").css("background", "url('https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/Mercenarios.png') no-repeat");		
+			break;
+
 	}
+	$(".faccao").css("background-size", "contain");
+	$(".faccao").css("background-position", "center");
 
 	//Aloca Atributos
 	$(".disparos").html(attrDis.value);
