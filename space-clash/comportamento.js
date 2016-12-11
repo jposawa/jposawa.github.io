@@ -1,11 +1,12 @@
 $(document).ready(function()
 {
-	var altura = 450;
-	var largura = altura * 1.5;
-    $("#FormatoCarta").css("top",(screen.height-altura)*0.4); //Posiciona a coordenada Y do meio da carta a 60% da tela
+	var largura = 450;
+	var altura = largura * 1.5;
+    $("#FormatoCarta").css("top",(screen.height-altura)*0.3); //Posiciona a coordenada Y do meio da carta a 30% da tela
     $("#FormatoCarta").css("left",(screen.width-largura)/2); //Centraliza a coordenada X do meio da carta no meio da tela dinamicamente
     $("#FormatoCarta").css("width", largura);
     $("#FormatoCarta").css("height", altura);
+    $("#FormatoCarta br").css("line-height",altura*0.006);
 
     var alturaBordaAtributo = altura*0.10;
 //    var larguraCaixaEsquerda = $("#ColunaEsquerda").css("width");
@@ -16,7 +17,7 @@ $(document).ready(function()
 
 function gerarCarta()
 {
-	if(attrTipo.value == "" || attrTipo.value == null)
+	/*if(attrTipo.value == "" || attrTipo.value == null)
 	{
 		alert("Faltou selecionar tipo de carta");
 		attrTipo.focus();
@@ -93,7 +94,7 @@ function gerarCarta()
 		alert("Faltou adicionar URL para imagem da carta");
 		linkImagem.focus();
 		return false;
-	}
+	}*/
 	//Coloca Tipo e Nome
 	$("#LinhaNome").html("<b>"+attrTipo.value+"</b> - "+attrNome.value);
 
@@ -116,7 +117,19 @@ function gerarCarta()
 		$(".creditos").html(custoCreditos.value+"₢");
 	}
 
-	$(".faccao").html(attrFac.value);
+	var numFaccao = parseInt(attrFac.value);
+	//alert(numFaccao);
+
+	switch(numFaccao)
+	{
+		case 1: //Organização Terráquea Unida
+			//alert(numFaccao);
+			$(".faccao").html("");
+			$(".faccao").css("background", "url('https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/OTU.png') no-repeat");
+			$(".faccao").css("background-size", "contain");
+			$(".faccao").css("background-position", "center");
+			break;
+	}
 
 	//Aloca Atributos
 	$(".disparos").html(attrDis.value);

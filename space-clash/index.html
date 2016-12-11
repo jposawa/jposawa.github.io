@@ -32,12 +32,12 @@
 	<div class="DefineTipoENome">
 		<select id="attrFac">
 			<option value="">Facção</option>
-			<option value="CI">Conglomerado Independente (CI)</option>
-			<option value="OTU">Organização Terráquea Unificada (OTU)</option>
-			<option value="OTU/CI">OTU/CI</option>
-			<option value="Davok">Davok</option>
-			<option value="Nayan">Concílio Nayan</option>
-			<option value="Mercenário">Mercenário Livre</option>
+			<option value="2">Conglomerado Independente (CI)</option>
+			<option value="1">Organização Terráquea Unificada (OTU)</option>
+			<option value="3">OTU/CI</option>
+			<option value="4">Davok</option>
+			<option value="5">Concílio Nayan</option>
+			<option value="6">Mercenário Livre</option>
 		</select>
 		<br><br>
 		<select id="attrTipo">
@@ -86,18 +86,20 @@
 <!--Formato da carta final-->
 <div id="FormatoCarta">
 
-	<div id="ColunaEsquerda">
-		<p class="valorAtr bordaAtr disparos"></p>
+	<div class="trapezioEsquerdo">	
+		<p class="escudos"></p>
 		<br>
-		<p class="valorAtr bordaAtr alcance"></p>
+		<p class="blindagem"></p>
 		<br>
-		<p class="valorAtr bordaAtr escudos"></p>
+		<p class="velocidade"></p>
+	</div>
+
+	<div class="trapezioDireito">
+		<p class="disparos"></p>
 		<br>
-		<p class="valorAtr bordaAtr blindagem"></p>
+		<p class="alcance"></p>
 		<br>
-		<p class="valorAtr bordaAtr velocidade"></p>
-		<br>
-		<p class="valorAtr bordaAtr tropas"></p>
+		<p class="tropas"></p>
 	</div>
 
 	<div id="ImagemCentro">
@@ -112,9 +114,9 @@
 
 	<div id="LinhaCustos">
 		<p class="valorCusto bordaCusto bytes">Frequência THz</p>
-		<p class="faccao">Facção</p>
 		<p class="valorCusto bordaCusto2 creditos">Créditos ₢</p>
 	</div>
+	<div class="faccao"><p>Facção</p></div>
 
 	<div id="LinhaNome">
 		TIPO - NOME

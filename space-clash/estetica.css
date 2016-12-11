@@ -70,13 +70,18 @@ input:focus
 	/*width:255;*/
 	height:170;
 	border:2px solid #59e;
-	background:#233;
+	background:#333;
 	color:#eee;
 	border-radius:2%;
 	z-index:5;
 }
 
-#ColunaEsquerda
+#FormatoCarta *
+{
+	font-size:10pt;
+}
+
+/*#ColunaEsquerda
 {
 	position:absolute;
 	left:0;
@@ -84,23 +89,23 @@ input:focus
 	height:100%;
 	border-right:2px solid #59e;
 	z-index:8;
-}
+}*/
 
 #FormatoCarta br
 {
-	line-height: 400%;
+	/*line-height: 100%;*/
 }
 
 #ImagemCentro
 {
 	position:absolute;
-	width:60%;
-	height:80%;
+	width:83.5%;
+	height:55.6%;
 	top:0;
-	left:11%;
+	left:8.25%;
 	text-align:center;
 	border:none;
-	z-index:9;
+	z-index:8;
 }
 
 #imagemCarta
@@ -124,11 +129,12 @@ input:focus
 #ColunaTexto
 {
 	position:absolute;
-	right:0;
+	bottom:8%;
+	left:3%;
 	padding:1% 0.25% 0 0.5%;
-	width:29%;
-	height:100%;
-	border-left:2px solid #59e;
+	width:94%;
+	height:29%;
+	border:2px solid #59e;
 	z-index:8;
 }
 
@@ -146,83 +152,144 @@ input:focus
 
 #textoCarta
 {
-	font-size:10pt;
+	/*font-size:10pt;*/
 }
 
 #LinhaCustos
 {
 	position:absolute;
-	margin-left:11%;
 	bottom:0;
-	width:60%;
-	height:10%;
+	left:0;
+	width:100%;
+	height:4.7%;
 	border-top: 2px solid #59e;
+	/*border-right: 2px solid #59e;
+	border-left: 2px solid #59e;*/
 	z-index:8;
 }
 
 #LinhaNome
 {
 	position:absolute;
-	margin-left:11%;
 	padding:1.5% 0 0 1%;
-	bottom:0;
-	width:60%;
-	height:20%;
+	top:55.6%;
+	left:0;
+	width:100%;
+	height:5%;
 	border-top: 2px solid #59e;
+	border-bottom: 2px solid #59e;
 	z-index:8;
+}
+
+.trapezioEsquerdo, .trapezioDireito
+{
+	position:absolute;
+	top:7.5%;
+	left:0;
+	width:11%;
+	height:39.2%;
+	padding-top:12%;
+	/*border-top: 2px solid #59e;
+	border-right:2px solid #59e;
+	border-bottom:2px solid #59e;*/
+	background:rgba(10,35,50,0.95);
+	z-index:9;
+}
+
+/*.trapezioEsquerdo p
+{
+	position:absolute;
+	display:block;
+	width:79%;
+	height:15%;
+	padding-top:22%;
+	left: 10.5%;
+	text-align:center;
+}*/
+
+.trapezioDireito
+{
+	right:0;
+	left:auto;
+}
+
+.trapezioEsquerdo p, .trapezioDireito p
+{
+	position:absolute;
+	display:block;
+	width:79%;
+	height:15%;
+	padding-top:22%;
+	left: 10.5%;
+	text-align:center;
 }
 
 .valorAtr
 {
+	border:2px solid red;
 	position:absolute;
-	margin:0;
 	text-align:center;
-	padding-top:15%;
+	/*padding-top:15%;*/
 }
 
-.valorAtr input
+/*.valorAtr input
 {
-	width:80%;
-}
+	/*width:80%;*
+}*/
 
 .bordaAtr
 {
-	position:absolute;
-	margin-top:60%;
-	left:20%;
-	border:0px solid #59e;
+	/*position:absolute;
+	width:5.9%;
 	height:10%;
-	border-radius:50%;
+	margin-top:60%;
+	left:0;
+	border:2px solid #59e;
+	border-radius:50%;*/
 }
 
 .faccao
 {
 	position:absolute;
 	width:100%;
-	padding-top:3%;
+	height:7%;
+	bottom:1%;
 	left:0;
 	text-align:center;
+	border:0;
+	/*background: url("https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/OTU.png") no-repeat;
+	background-size: contain;
+	background-position: center;*/
+	z-index:9;
+}
+
+.faccao p
+{
+	position:absolute;
+	width:100%;
+	bottom:0;
+	left:0;
+	text-align: center;
 }
 
 .valorCusto
 {
 	position:absolute;
 	text-align:center;
-	padding-top:3%;
 	height:100%;
 }
 
 .bordaCusto
 {
 	left:0;
-	border-right:2px solid #59e;
+	border-right:0px solid #59e;
 	width:33%;
 }
 
 .bordaCusto2
 {
 	right:0;
-	border-left:2px solid #59e;
+	border-left:0px solid #59e;
 	width:33%;
 }
 
@@ -299,42 +366,42 @@ input:focus
 /*Imagens Atributos*/
 .disparos
 {
-	background: url("https://dl.dropboxusercontent.com/u/68292535/Jogos/spaceClash/Disparos1.png") no-repeat;
+	background: url("https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/Disparos1.png") no-repeat;
 	background-size: contain;
 	background-position: center;
 }
 
 .alcance
 {
-	background: url("https://dl.dropboxusercontent.com/u/68292535/Jogos/spaceClash/Alcance.png") no-repeat;
+	background: url("https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/Alcance.png") no-repeat;
 	background-size: contain;
 	background-position: center;
 }
 
 .escudos
 {
-	background: url("https://dl.dropboxusercontent.com/u/68292535/Jogos/spaceClash/Escudos1.png") no-repeat;
+	background: url("https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/Escudos1.png") no-repeat;
 	background-size: contain;
 	background-position: center;
 }
 
 .blindagem
 {
-	background: url("https://dl.dropboxusercontent.com/u/68292535/Jogos/spaceClash/Blindagem.png") no-repeat;
+	background: url("https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/Blindagem.png") no-repeat;
 	background-size: contain;
 	background-position: center;
 }
 
 .velocidade
 {
-	background: url("https://dl.dropboxusercontent.com/u/68292535/Jogos/spaceClash/Velocidade.png") no-repeat;
+	background: url("https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/Velocidade.png") no-repeat;
 	background-size: contain;
 	background-position: center;
 }
 
 .tropas
 {
-	background: url("https://dl.dropboxusercontent.com/u/68292535/Jogos/spaceClash/Tropas.png") no-repeat;
+	background: url("https://raw.githubusercontent.com/jposawa/jposawa.github.io/master/space-clash/imgs/Tropas.png") no-repeat;
 	background-size: contain;
 	background-position: center;
 }
