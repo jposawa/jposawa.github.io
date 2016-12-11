@@ -18,7 +18,7 @@ $(document).ready(function()
 
 function gerarCarta()
 {
-	/*if(attrTipo.value == "" || attrTipo.value == null)
+	if(attrTipo.value == "" || attrTipo.value == null)
 	{
 		alert("Faltou selecionar tipo de carta");
 		attrTipo.focus();
@@ -95,7 +95,7 @@ function gerarCarta()
 		alert("Faltou adicionar URL para imagem da carta");
 		linkImagem.focus();
 		return false;
-	}*/
+	}
 	//Coloca Tipo e Nome
 	$("#LinhaNome").html("<b>"+attrTipo.value+"</b> - "+attrNome.value);
 
