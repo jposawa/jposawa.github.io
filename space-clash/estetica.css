@@ -67,10 +67,10 @@ input:focus
 #FormatoCarta
 {
 	position:absolute;
-	/*width:255;*/
-	height:170;
+	width:23.43%;
+	/*height:170;*/
 	border:2px solid #59e;
-	background:#333;
+	background:#222;
 	color:#eee;
 	border-radius:2%;
 	z-index:5;
@@ -189,13 +189,13 @@ input:focus
 	position:absolute;
 	top:7.5%;
 	left:0;
-	width:8%;
+	width:9%;
 	height:30.2%;
 	padding-top:7.5%;
 	/*border-top: 2px solid #59e;
 	border-right:2px solid #59e;
 	border-bottom:2px solid #59e;*/
-	background:rgba(10,35,50,0.95);
+	background:rgba(10,35,50,0);
 	z-index:9;
 }
 
@@ -222,7 +222,7 @@ input:focus
 	display:block;
 	width:79%;
 	height:15%;
-	padding-top:22%;
+	padding-top:18%;
 	left: 10.5%;
 	text-align:center;
 }

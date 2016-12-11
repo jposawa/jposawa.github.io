@@ -1,6 +1,7 @@
 $(document).ready(function()
 {
-	var largura = 450;
+	var largura = parseInt($("#FormatoCarta").css("width"));
+	alert(largura);
 	var altura = largura * 1.5;
     $("#FormatoCarta").css("top",(screen.height-altura)*0.3); //Posiciona a coordenada Y do meio da carta a 30% da tela
     $("#FormatoCarta").css("left",(screen.width-largura)/2); //Centraliza a coordenada X do meio da carta no meio da tela dinamicamente
