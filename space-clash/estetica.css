@@ -7,7 +7,7 @@
 	padding: 0;
 	border:none;
 	transition: all 0.2s;
-	color: #59e;
+	color: #eee;
 }
 
 a
@@ -70,7 +70,7 @@ input:focus
 	width:23.43%;
 	/*height:170;*/
 	border:2px solid #59e;
-	background:#222;
+	background:#444;
 	color:#eee;
 	border-radius:2%;
 	z-index:5;
@@ -135,7 +135,7 @@ input:focus
 	width:94%;
 	height:29%;
 	border:0px solid #59e;
-	background:rgba(55,65,75,0.95);
+	background:rgba(30,80,95,0.95);
 	z-index:8;
 }
 
@@ -160,11 +160,11 @@ input:focus
 {
 	position:absolute;
 	bottom:0.1%;
-	left:1%;
-	width:98%;
+	left:3%;
+	width:94%;
 	height:4.7%;
 	border-top: 0px solid #59e;
-	background: rgba(30,45,45,1);
+	background: rgba(30,80,95,1);
 	/*border-right: 2px solid #59e;
 	border-left: 2px solid #59e;*/
 	z-index:8;
@@ -178,10 +178,16 @@ input:focus
 	height:5%;
 	top:55.6%;
 	left:3%;
+	text-align:center;
 	border-top: 0px solid #59e;
 	border-bottom: 0px solid #59e;
-	background:rgba(50,65,80,0.95);
+	background:rgba(30,80,95,0.95);
 	z-index:8;
+}
+
+#ConfigCarta *
+{
+	color:#59e;
 }
 
 .trapezioEsquerdo, .trapezioDireito
@@ -352,10 +358,10 @@ input:focus
 .DefineCustos
 {
 	position:absolute;
-	display: inline-block;
+	display:block;
 	width:35%;
-	top:85%;
-	left:32.5%;
+	top:70%;
+	left:10%;
 	padding: 0 0 0 4%;
 }
 
