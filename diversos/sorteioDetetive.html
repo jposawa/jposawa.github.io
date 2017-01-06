@@ -1,0 +1,198 @@
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Detetive - O que você é?</title>
+	
+	<style>
+		*
+		{
+			font-family: "Verdana", sans-serif;
+			transition:all 0.3s;
+			box-sizing: border-box;
+		}
+
+		#btnComando
+		{
+			visibility: visible;
+		}
+
+		#btnZerar
+		{
+			visibility: hidden;
+		}
+
+		#corpoSite
+		{
+			position:absolute;
+			width:80%;
+			top:5%;
+			left:10%;
+			padding:1%;
+			color:#dde;
+			background:#444;
+			box-shadow: 0 0 10px 2px #444;
+		}
+
+		#janelaSorteio
+		{
+			text-align:center;
+			margin-top:5%;
+		}
+
+		input
+		{
+			padding:0.4%;
+			background:#347;
+			color:#dde;
+			border:none;
+		}
+
+		input[type=button]
+		{
+			margin-top:2%;
+		}
+
+		input[type=button]:hover,input:focus
+		{
+			background:#236;
+			color:#fff;
+			box-shadow: 0 0 10px 2px #333 inset;
+		}
+	</style>
+
+	<script>
+		var statusJogo = 1;
+		statusJogo = parseInt(statusJogo);
+		var qtsCargos = 0;
+		var cargoSorteado = 0;
+		var defCargos = [];
+
+		function preparaJogadores()
+		{
+			//alert(qtdParticipantes.value);
+			defCargos = [];
+			//alert("entrou");
+			if(parseInt(qtdParticipantes.value) <= parseInt(qtdAnjos.value)+parseInt(qtdAssassinos.value)+parseInt(qtdDetetives.value))
+			{
+				alert("Deu ruim");
+				//alert("Deu ruim");
+				statusJogo = 1
+				alert("Quantidade de jogadores insuficiente");
+				return false;
+			}
+			else
+			{
+				alert("Foi Legal");
+				for(var i = 0; i<parseInt(qtdAssassinos.value); i++)
+				{
+					defCargos.push("K");
+				}
+				for(var i=0; i<parseInt(qtdAnjos.value); i++)
+				{
+					defCargos.push("A");
+				}
+				for(var i=0; i<parseInt(qtdDetetives.value); i++)
+				{
+					defCargos.push("D");
+				}
+				for(var i=0; i<parseInt(qtdParticipantes.value)-(parseInt(qtdAnjos.value)+parseInt(qtdAssassinos.value)+parseInt(qtdDetetives.value));i++)
+				{
+					defCargos.push("V");
+				}
+				qtsCargos = parseInt(qtdAnjos.value)+parseInt(qtdAssassinos.value)+parseInt(qtdDetetives.value);			
+				//Avisos.innerHTML = defCargos;
+				btnComando.value = "Sortear";	
+			}
+		}
+
+		function sorteiaJogadores()
+		{
+			//alert(qtsCargos);
+			cargoSorteado = (Math.floor(Math.random()*100)+1)%parseInt(defCargos.length);
+			//alert(cargoSorteado);
+			if(defCargos[cargoSorteado] == "K")
+			{
+				alert("Você será Assassino!");
+				qtsCargos -= 1;
+				defCargos.splice(cargoSorteado,1);
+			}
+			else if(defCargos[cargoSorteado] == "A")
+			{
+				alert("Você será Anjo!");
+				qtsCargos -= 1;
+				defCargos.splice(cargoSorteado,1);
+			}
+			else if(defCargos[cargoSorteado] == "D")
+			{
+				alert("Você será Detetive!");
+				qtsCargos -= 1;
+				defCargos.splice(cargoSorteado,1);
+			}
+			else
+			{
+				alert("Você será Vítima!");
+				defCargos.splice(cargoSorteado,1);	
+			}
+
+			if(qtsCargos == 0)
+			{
+				btnComando.style.visibility = "hidden";
+				Avisos.innerHTML = "Todos os cargos já foram sorteados, quem sobrou vai ser Vítima!<br>Podem começar o jogo!";
+				btnZerar.style.visibility = "visible";
+			}
+		}
+
+		function executaJogo()
+		{
+			//alert(statusJogo+"\n"+qtsCargos);
+			if(qtsCargos == 0)
+			{
+				preparaJogadores();
+				statusJogo = 2;
+			}
+			else
+			{
+				sorteiaJogadores();
+			}
+		}
+
+		function novoJogo()
+		{
+			statusJogo = 1;
+
+			qtdParticipantes.value = qtdParticipantes.min;
+			qtdAnjos.value = qtdAnjos.min;
+			qtdAssassinos.value = qtdAssassinos.min;
+			qtdDetetives.value = qtdDetetives.min;
+
+			btnComando.value = "Prepara Jogo";
+			btnComando.style.visibility = "visible";
+			btnZerar.style.visibility = "hidden";
+		}
+	</script>
+</head>
+
+<body>
+<div id="corpoSite">
+	<div id="Avisos">
+		IMPORTANTE: Quando for sorteada sua função, aperta no &#10005; da pequena janela ou em Ok e só depois disso passe para o próximo
+	</div>
+
+	<div id="janelaSorteio">
+		<div id="parametrosSorteio">
+			<p>Quantidade de Participantes:</p>
+			<input id="qtdParticipantes" type="number" min="4" value="4"><br>
+			<p>Quantidade de Anjos:</p>
+			<input id="qtdAnjos" type="number" min="1" value="1"><br>
+			<p>Quantidade de Assassinos:</p>
+			<input id="qtdAssassinos" type="number" min="1" value="1"><br>
+			<p>Quantidade de Detetives:</p>
+			<input id="qtdDetetives" type="number" min="1" value="1">
+		</div>
+		<input id="btnComando" type="button" onclick="return executaJogo()" value="Prepara Jogo">
+		<input id="btnZerar" type="button" onclick="novoJogo()" value="Reiniciar">
+	</div>
+</div>
+</body>
+</html>
