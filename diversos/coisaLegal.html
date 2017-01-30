@@ -1,0 +1,73 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+
+<title>Coisinha legal</title>
+
+
+<style>
+*
+{
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+#campoCoisaLegal
+{
+  position: absolute;
+  width:80%;
+  height:80%;
+  top: 5%;
+  left: 10%;
+  background: rgb(50,50,50);
+  text-align: center;
+}
+
+#botaoMaroto
+{
+	position:absolute;
+	width:6%;
+	bottom:0;
+	left:47%;
+	border:none;
+	background: rgb(50, 60, 100);
+  	color: #eee;
+}
+
+#botaoMaroto:hover
+{
+  background: rgb(30,40,80);
+  color:#fff;
+}
+
+</style>
+
+
+<script>
+function coisaLegal()
+{
+  	var novaCor1 = parseInt(Math.random(1)*255);
+  	var novaCor2 = parseInt(Math.random(1)*255);
+  	var novaCor3 = parseInt(Math.random(1)*255);
+
+  	campoCoisaLegal.style.background = "rgb("+novaCor1+","+novaCor2+","+novaCor3+")";
+
+	botaoMaroto.style.background = "rgb("+(255-novaCor1)+","+(255-novaCor2)+","+(255-novaCor1)+")";
+	botaoMaroto.style.color = "rgb("+novaCor1+","+novaCor2+","+novaCor3+")";
+}
+</script>
+</head>
+
+
+<body>
+
+<div id="campoCoisaLegal">
+
+<button id="botaoMaroto" onclick="coisaLegal()">Mudar</button>
+
+</div>
+
+</body>
+
+</html>
