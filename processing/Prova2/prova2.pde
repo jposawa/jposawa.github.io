@@ -44,11 +44,14 @@ void draw()
   
   grafico();
   noStroke();
+  fill(0);
   rect(0, height*0.5-120, width, height); //Assim a parte do velocímetro é sempre "resetada" mantendo o desenho ok enquanto a parte do gráfico pode ser feita a linha
   stroke(0, velocidade/270, 1);
   noFill();
   baseVelocimetro();
   ponteiroVelocimetro(85, velocidade);
+  fill(0,velocidade/270,1);
+  text(int(velocidade/270*200)+" km/h", width*0.5-15,height*0.6);
   println(x);
 }
 
@@ -97,9 +100,9 @@ void grafico()
     line(x+margemLados, y, x_anterior+margemLados, y_anterior);
   noStroke();
   fill(0);
-  rect(width*0.61,0,width*0.39,height*0.5-140);
+  rect(width*0.81,0,width*0.39,height*0.5-140);
   fill(0,0,1);
-  text(str(velocidade),width*0.61,y);
+  text(int(velocidade/270*200)+"km/h",width*0.81,y);
   x_anterior = x;     
   y_anterior = y;
 }
