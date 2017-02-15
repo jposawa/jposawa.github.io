@@ -1,0 +1,52 @@
+*
+{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+body
+{
+	background: #444;
+}
+
+@media screen and (min-width: 720px)
+{
+
+	#cabecalho
+	{}
+
+	#corpoPagina
+	{
+		position:absolute;
+
+	}
+}
+
+@media screen and (min-width: 1280px)
+{
+
+	#cabecalho
+	{}
+
+	#corpoPagina
+	{
+		position:absolute;
+		width:70%;
+		height:100%;
+		top:0;
+		left:15%;
+		background:#eee;
+		z-index:6;
+	}
+
+	.txtCorpo
+	{
+		position:absolute;
+		width:100%;
+		color:#333;
+		text-align:center;
+	}
+}
