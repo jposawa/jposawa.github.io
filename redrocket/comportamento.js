@@ -3,13 +3,11 @@ var pagAnterior = "inicio.html";
 
 $(document).ready(function()
 {
-	//alert(pagAnterior);
-	$("#corpoPagina").load("inicio.html");
-
+	$("#corpoPagina").css("pagAnterior");
 });
 
 function carregaPagina(url)
 {
 	//alert(url);
-	$("#corpoPagina").css("inicio.html");
+	$("#corpoPagina").css(url);
 }
