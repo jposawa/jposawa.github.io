@@ -13,6 +13,25 @@
 
 <body>
 <div id="cabecalho">
+    <div id="nomeSite">Carne Delivery</div>
+    <ul id="menu">
+        <li onclick="carregaPagina('inicio.html')">Início</li>
+        <li onclick="carregaPagina('pedir.html')">Fazer pedido</li>
+        <li onclick="carregaPagina('sobre.html')">Conheça a gente</li>
+        <li onclick="carregaPagina('contato.html')">Contato</li>
+    </ul>
+
+    <div id="login">
+        <p><span onclick="carregaPagina('cadastro.html')">Cadastrar</span> | <span onclick="blocoLogin(this)" value="0">Login</span></p>
+        <div id="fzrLogin">
+            <input id="user" type="text" placeholder="Usuário/E-mail"><br>
+            <input id="senha" type="password" placeholder="Senha"><br>
+            <button onclick="fazLogin()">Login</button>
+        </div>
+
+        <div id="loginFeito">
+        </div>
+    </div>
 </div>
 
 <div id="corpoPagina">

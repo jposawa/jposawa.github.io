@@ -1,13 +1,14 @@
 var logado = false;
-var pagAnterior = "inicio.html";
+var pagAtual = "inicio.html";
 
 $(document).ready(function()
 {
-	$("#corpoPagina").css("pagAnterior");
+	$("#corpoPagina").css("pagAtual");
 });
 
 function carregaPagina(url)
 {
 	//alert(url);
+	pagAtual = url;
 	$("#corpoPagina").css(url);
 }
