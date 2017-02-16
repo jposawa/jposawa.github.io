@@ -13,7 +13,7 @@
 
 <body>
 <div id="cabecalho">
-    <div id="nomeSite">Carne Delivery</div>
+    <div id="nomeSite" onclick="carregaPagina('inicio.html')">Carne Delivery</div>
     <ul id="menu">
         <li onclick="carregaPagina('inicio.html')">Início</li>
         <li onclick="carregaPagina('pedir.html')">Fazer pedido</li>
@@ -22,11 +22,12 @@
     </ul>
 
     <div id="login">
-        <p><span onclick="carregaPagina('cadastro.html')">Cadastrar</span> | <span onclick="blocoLogin(this)" value="0">Login</span></p>
+        <p><span onclick="carregaPagina('cadastro.html')">Cadastrar</span> | <span id="interruptorLogin" onclick="blocoLogin(this)" data-interruptor="0">Login</span></p>
         <div id="fzrLogin">
-            <input id="user" type="text" placeholder="Usuário/E-mail"><br>
-            <input id="senha" type="password" placeholder="Senha"><br>
-            <button onclick="fazLogin()">Login</button>
+        <p class="fechar1" onclick="blocoLogin(interruptorLogin)">&times;</p><br>
+            <p><input id="user" type="text" placeholder="Usuário/E-mail"></p><br>
+            <p><input id="senha" type="password" placeholder="Senha"></p><br>
+            <p><button onclick="fazLogin()">Login</button></p>
         </div>
 
         <div id="loginFeito">

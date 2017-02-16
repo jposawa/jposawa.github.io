@@ -87,6 +87,45 @@ body
 		position:absolute;
 		top:30%;
 		right:5%;
+		cursor:default;
+	}
+
+	#login span:hover
+	{
+		background:#611;
+		color:#fff;
+		cursor:pointer;
+		box-shadow: 0 0 10px #333;
+	}
+
+	#fzrLogin
+	{
+		position:absolute;
+		background:#822;
+		padding-right:10%;
+		padding-left:10%;
+		margin-top:15%;
+		height:auto;
+		max-height:0;
+		overflow:hidden;
+	}
+
+	#fzrLogin input, #fzrLogin button
+	{
+		padding:2%;
+		border:none;
+	}
+
+	#fzrLogin button
+	{
+		background:#eee;
+	}
+
+	#fzrLogin button:hover,#fzrLogin button:focus
+	{
+		background:#595;
+		color:#fff;
+		cursor:pointer;
 	}
 
 	#corpoPagina
@@ -106,5 +145,19 @@ body
 		width:100%;
 		color:#333;
 		text-align:center;
+	}
+
+	.fechar1
+	{
+		position:absolute;
+		right:0;
+		padding:0 0.5% 0 0.5%;
+	}
+
+	.fechar1:hover
+	{
+		background:#500;
+		color:#fff;
+		cursor:pointer;
 	}
 }
