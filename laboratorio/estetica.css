@@ -275,6 +275,44 @@ body
 	}
 
 	.form1
+	{
+		position:absolute;
+		width:80%;
+		left:10%;
+	}
+
+	.form1 input, .form1 textarea
+	{
+		border:none;
+		background:#eee;
+		color:#111;
+		padding:0.8% 0.8% 1% 0.8%;
+	}
+
+	.form1 textarea
+	{
+		width:70%;
+		resize: none;
+	}
+
+	.form1 input[type="button"], .form1 input[type="reset"]
+	{
+		cursor:pointer;
+	}
+
+	.form1 input:focus, .form1 textarea:focus, .form1 input[type="button"]:hover
+	{
+		background:#696;
+		color:#fff;
+		box-shadow: 2px 2px 7px #333;
+	}
+
+	.form1 input[type="reset"]:hover, .form1 input[type="reset"]:focus
+	{
+		background:#994;
+		color:#fff;
+		box-shadow: 2px 2px 7px #333;
+	}
 }
 
 .noselect 

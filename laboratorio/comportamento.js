@@ -49,3 +49,15 @@ function blocoContatos(interruptor)
 		interruptor.setAttribute("data-interruptor","0");
 	}
 }
+
+function confirmaZerarCampos()
+{
+	if(confirm("Deseja mesmo apagar os dados digitados?"))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
