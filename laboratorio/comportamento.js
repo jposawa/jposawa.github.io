@@ -3,14 +3,13 @@ var pagAtual = "inicio.html";
 
 $(document).ready(function()
 {
-	//$("#corpoPagina").load("pagAtual");
+	$("#corpoPagina").load(pagAtual);
 });
 
 function carregaPagina(url)
 {
-	//alert(url);
 	pagAtual = url;
-	$("#corpoPagina").load("url");
+	$("#corpoPagina").load(url);
 }
 
 function blocoLogin(interruptor)
