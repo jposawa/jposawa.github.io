@@ -1,0 +1,70 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <!--script src="angular.min.js"></script PARA USO LOCAL-->
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.min.js"></script-->
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link href="estetica.css" rel="stylesheet">
+    <!--script src="jquery-2.1.4.min.js"></script> <!--PARA USO LOCAL-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> <!--Uso web-->
+    <script type="text/javascript" src="comportamento.js"></script>
+    <title>Laboratório Dr. Wilton</title>
+</head>
+
+<body>
+<div id="cabecalho">
+    <div id="nomeSite" class="noselect" onclick="carregaPagina('inicio.html')">
+        <p>Laboratório</p>
+        <p>Dr. Wilton</p>
+    </div>
+
+    <ul id="menu" class="noselect">
+        <li onclick="carregaPagina('inicio.html')">Início</li>
+        <li>Consultar exame</li>
+        <li>Sobre o laboratório</li>
+        <li id="btContatos" onclick="blocoContatos(this)" data-interruptor="0">Fale conosco</li>
+    </ul>
+
+    <div id="login">
+        <p><span onclick="carregaPagina('cadastro.html')">Cadastrar</span> | <span id="interruptorLogin" onclick="blocoLogin(this)" data-interruptor="0">Login</span></p>
+        <div id="fzrLogin">
+        <p class="fechar1 noselect" onclick="blocoLogin(interruptorLogin)">&times;</p><br>
+            <p><input id="user" type="text" placeholder="Usuário/E-mail"></p><br>
+            <p><input id="senha" type="password" placeholder="Senha"></p><br>
+            <p><button onclick="fazLogin()">Login</button></p>
+        </div>
+
+        <div id="loginFeito">
+        </div>
+    </div>
+
+    <div class="campoContatos">
+        <ul class="contatos">
+            <li><span>&#128379; (88) xxxx-xxxx</span></li>
+            <li> | <span>e-mail@dominio.com</span></li>
+            <li> | <span>&#9990; (88) 9 xxxx-xxxx</span></li>
+            <li> | <span onclick="carregaPagina('msgcontatos.html')">Mensagem pelo site</span>
+        </ul>
+        <span class="fechar2 noselect" onclick="blocoContatos(btContatos)">&times;</span>
+    </div>
+</div>
+
+<div id="corpoPagina">
+    <div class="colEsq">
+        <h1>Título 1</h1>
+        <p>Esse é apenas um Parágrafo</p>
+        <p>Esse é outro Parágrafo também...</p>
+        <p>Existem textos já prontos para testar enquadramento de parágrafos como esse, mas as vezes dá aquela preguiça de procurar por eles...</p>
+        <hr>
+    </div>
+    <div class="colDir">
+        <h1>TÍTULO 2</h1>
+        <p>Esse é apenas um Parágrafo na coluna da direita</p>
+        <p>Esse é outro Parágrafo também...</p>
+        <p>Tem momentos que me pergunto se seria melhor e mais rápido pegar na Internet os textos de teste. Eles não possuem basicamente nenhuma mensagem, são apenas palavras que servem para testar o enquadramento mesmo.</p>
+        <hr>
+    </div>
+</div>
+
+</body>
+</html>

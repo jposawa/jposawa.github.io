@@ -1,0 +1,289 @@
+* /*RESETS*/
+{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "Tahoma", sans-serif;
+	transition: all 0.3s;
+	list-style: none;
+	font-weight: normal;
+}
+
+body
+{
+	/*background: #444;*/
+}
+
+@media screen and (min-width: 720px)
+{
+
+	#cabecalho
+	{}
+
+	#corpoPagina
+	{
+		position:absolute;
+
+	}
+}
+
+@media screen and (min-width: 1280px)
+{
+
+	#cabecalho
+	{
+		position:absolute;
+		width:100%;
+		height:10%;
+		top:0;
+		left:0;
+		/*background:#eee;*/
+		color:#495;
+		z-index:6;
+	}
+
+	#nomeSite
+	{
+		position:absolute;
+		font-size:2rem;
+		width:28%;
+		padding:0 0.2% 0.5% 15%;
+		top:0;
+		left:0;
+		background:#495;
+		color:#eee;
+		cursor:default;
+		z-index:9;
+	}
+
+	#nomeSite:hover
+	{
+		background:#262;
+		color:#fff;
+		cursor:pointer;
+	}
+
+	#menu
+	{
+		position:absolute;
+		width:100%;
+		bottom:0;
+		left:0;
+		text-align:center;
+		cursor:default;
+	}
+
+	#menu li
+	{
+		padding:0.1% 0.2% 0.1% 0.2%;
+		display:inline-block;
+	}
+
+	#menu li:hover
+	{
+		background:#161;
+		color:#fff;
+		box-shadow:1px 1px 4px 0px #333;
+		cursor:pointer;
+	}
+
+	#login
+	{
+		position:absolute;
+		bottom:0;
+		right:5%;
+		cursor:default;
+	}
+
+	#login span:hover
+	{
+		background:#161;
+		color:#fff;
+		cursor:pointer;
+		box-shadow: 0 0 10px #333;
+	}
+
+	#fzrLogin
+	{
+		position:absolute;
+		background:#262;
+		color:#eee;
+		padding-right:15%;
+		padding-left:10%;
+		margin-top:2%;
+		height:auto;
+		max-height:0;
+		overflow:hidden;
+	}
+
+	#fzrLogin input, #fzrLogin button
+	{
+		padding:2%;
+		border:none;
+	}
+
+	#fzrLogin button
+	{
+		background:#233;
+		color:#eee;
+	}
+
+	#fzrLogin button:hover,#fzrLogin button:focus
+	{
+		background:#fff;
+		color:#595;
+		box-shadow:2px 2px 4px #333;
+		cursor:pointer;
+	}
+
+	#corpoPagina
+	{
+		position:absolute;
+		width:90%;
+		height:85%;
+		top:12%;
+		left:5%;
+		background:#eee;
+		color:#eee;
+		z-index:5;
+	}
+
+	#corpoPagina h1
+	{
+		font-size:130%;
+		color:#6b6;
+	}
+
+	#corpoPagina hr
+	{
+
+	}
+
+	.campoContatos
+	{
+		position:absolute;
+		width:0;
+		height:50%;
+		/*padding: 0.5% 1% 0 1%;*/
+		padding:0;
+		text-align:center;
+		top:0;
+		right:0;
+		background:#233;
+		overflow: hidden;
+		cursor:default;
+	}
+
+	.contatos
+	{
+		opacity: 0;
+	}
+
+	.contatos li
+	{
+		display:inline-block;
+	}
+
+	.contatos li span:hover
+	{
+		color:#fff;
+		cursor:pointer;
+	}
+
+	.colCentro
+	{
+		position:absolute;
+		width:98%;
+		height:98%;
+		padding:0.2% 0.5% 0.2% 0.5%;
+		top:1%;
+		left:1%;
+		background:#233;
+		z-index:6;
+	}
+
+	.colCentro h1
+	{
+		text-align:center;
+	}
+
+	.colEsq
+	{
+		position:absolute;
+		width:49%;
+		height:96%;
+		padding:0.2% 0.5% 0.2% 0.5%;
+		top:2%;
+		left:0.5%;
+		background:#233;
+		z-index:6;
+	}
+
+	.colDir
+	{
+		position:absolute;
+		width:49%;
+		height:96%;
+		padding:0.2% 0.5% 0.2% 0.5%;
+		top:2%;
+		right:0.5%;
+		background:#233;
+		z-index:6;
+	}
+
+	.txtCorpo
+	{
+		position:absolute;
+		width:100%;
+		color:#333;
+		text-align:center;
+	}
+
+	.fechar1
+	{
+		position:absolute;
+		right:0;
+		padding:0 0.5% 0 0.5%;
+		cursor:default;
+	}
+
+	.fechar1:hover
+	{
+		padding:0 2% 0 2%;
+		box-shadow: 0 0 20px 2px #333 inset;
+		color:#fff;
+		cursor:pointer;
+	}
+
+	.fechar2
+	{
+		position:absolute;
+		font-size:180%;
+		top:0;
+		right:0;
+		padding:0 0.5% 0.2% 0.5%;
+		text-align:right;
+		cursor:default;
+	}
+
+	.fechar2:hover
+	{
+		box-shadow: 0 0 20px 20px #eee inset;
+		/*color:#fff;*/
+		cursor:pointer;
+	}
+
+	.form1
+}
+
+.noselect 
+{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
