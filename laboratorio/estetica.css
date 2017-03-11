@@ -114,11 +114,11 @@ body
 	{
 		position:absolute;
 		bottom:0;
-		right:5%;
+		right:10%;
 		cursor:default;
 	}
 
-	#login span:hover
+	#login>p:hover
 	{
 		background:#161;
 		color:#fff;
@@ -131,9 +131,10 @@ body
 		position:absolute;
 		background:#262;
 		color:#eee;
-		padding-right:15%;
+		padding-right:25%;
 		padding-left:10%;
 		margin-top:2%;
+		right:0;
 		height:auto;
 		max-height:0;
 		overflow:hidden;
@@ -273,7 +274,7 @@ body
 	.fechar1:hover
 	{
 		padding:0 2% 0 2%;
-		box-shadow: 0 0 20px 2px #333 inset;
+		background:#333;
 		color:#fff;
 		cursor:pointer;
 	}
