@@ -51,16 +51,38 @@ body
 		padding:0 0.2% 0.5% 15%;
 		top:0;
 		left:0;
-		background:#495;
+		background:#374;
 		color:#eee;
 		cursor:default;
 		z-index:9;
 	}
 
+	#nomeSite p
+	{
+		z-index:10;
+	}
+
+	#nomeSite span
+	{
+		position:absolute;
+		width:0;
+		height:100%;
+		top:0;
+		left:0;
+		z-index:9;
+	}
+
 	#nomeSite:hover
 	{
-		background:#262;
+		background: #485;
 		color:#fff;
+		cursor:pointer;
+	}
+
+	#nomeSite:hover span
+	{
+		width:30%;
+		background:rgba(55,55,55,0.3);
 		cursor:pointer;
 	}
 
@@ -144,7 +166,7 @@ body
 		height:85%;
 		top:12%;
 		left:5%;
-		background:#eee;
+		background:#234;
 		color:#eee;
 		z-index:5;
 	}
@@ -199,7 +221,7 @@ body
 		padding:0.2% 0.5% 0.2% 0.5%;
 		top:1%;
 		left:1%;
-		background:#233;
+		/*background:#233;*/
 		z-index:6;
 	}
 
@@ -216,7 +238,7 @@ body
 		padding:0.2% 0.5% 0.2% 0.5%;
 		top:2%;
 		left:0.5%;
-		background:#233;
+		/*background:#233;*/
 		z-index:6;
 	}
 
@@ -228,7 +250,7 @@ body
 		padding:0.2% 0.5% 0.2% 0.5%;
 		top:2%;
 		right:0.5%;
-		background:#233;
+		/*background:#233;*/
 		z-index:6;
 	}
 
