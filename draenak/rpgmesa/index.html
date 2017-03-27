@@ -1,0 +1,74 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <link href="estetica.css" rel="stylesheet">
+    <script src="jquery-2.1.4.min.js"></script> <!--PARA USO LOCAL-->
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> <!--Uso web-->
+    <script type="text/javascript" src="comportamento.js"></script>
+    <title>Layout de Ficha RPG</title>
+</head>
+
+<body>
+<div id="cabecalho">
+    <!--div id="nomeSite" class="noselect" onclick="carregaPagina('inicio.html')">
+        <span name="glass"></span>
+        <p>Laboratório</p>
+        <p>Dr. Wilton</p>
+    </div-->
+
+    <!--ul id="menu" class="noselect">
+        <li onclick="carregaPagina('inicio.html')">Início</li>
+        <li>Imprimir exame</li>
+        <li onclick="carregaPagina('sobre.html')">Sobre o laboratório</li>
+        <li id="btContatos" onclick="blocoContatos(this)" data-interruptor="0">Fale conosco</li>
+    </ul-->
+</div>
+
+<div id="baseFicha">
+    <div id="cabecalhoFicha">
+        <p><input name="nome" type="text" placeholder="Nome do Personagem"></p>
+        <p>
+            <select name="raca" id="raca">
+                <option>--- Raça ---</option>
+                <option value="Humano">Humano</option>
+                <option value="Elfo">Elfo</option>
+                <option value="Anão">Anão</option>
+                <option value="Orc">Orc</option>
+                <option value="Elfo">Elfo</option>
+                <option value="Elfo">Elfo</option>
+            </select>
+
+            <select name="fxEtaria">
+                <option>--- Faixa Etária ---</option>
+                <option value="Adolescente">Adolescente</option>
+                <option value="Jovem Adulto">Jovem Adulto</option>
+                <option value="Adulto">Adulto</option>
+                <option value="Meia Idade">Meia Idade</option>
+                <option value="Idoso">Idoso</option>
+            </select>
+        </p>
+        <p>
+            <select name="genero">
+                <option>--- Gênero ---</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Masculino">Masculino</option>
+            </select>
+
+            <select name="mDominante">
+                <option>--- Mão Dominante ---</option>
+                <option value="Canhoto">Canhoto</option>
+                <option value="Destro">Destro</option>
+            </select>
+        </p>
+    </div>
+    <div id="descInicial"></div>
+    <div id="atributos"></div>
+    <div id="vantagens"></div>
+    <div id="pericias"></div>
+    <div id="equipamentos"></div>
+    <div id="historico"></div>
+</div>
+
+</body>
+</html>
