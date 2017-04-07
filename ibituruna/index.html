@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Ibituruna - Grupo de Estudos de Computação em Nuvem</title>
-	<link rel="icon" href="imgs/favicon.png">
+	<link rel="favicon" href="/imgs/logo.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="estilosCSS.css">
 	<!--script src="/js/jquery-1.4.2.min.js"></script-->
@@ -18,16 +18,21 @@
 		<div id="menuPrincipal">
 			<ul class="menuLateral">
 				<li onclick="carregaPagina('inicio.html')">INÍCIO</li>
-				<li>PESQUISADORES</li>
-				<li>PROJETOS</li>
-				<li>PUBLICAÇÕES</li>
-				<li>LINKS</li>
-				<li>DOWNLOADS</li>
-				<li>CONTATO</li>
-				<li>SOBRE</li>
+				<li onclick="carregaPagina('pesquisadores.html')">PESQUISADORES</li>
+				<li onclick="carregaPagina('projetos.html')">PROJETOS</li>
+				<li onclick="carregaPagina('publicacoes.html')">PUBLICAÇÕES</li>
+				<li onclick="carregaPagina('links.html')">LINKS</li>
+				<li onclick="carregaPagina('downloads.html')">DOWNLOADS</li>
+				<li onclick="switchBloco('1')">CONTATO</li>
+				<li onclick="carregaPagina('sobre.html')">SOBRE</li>
 			</ul>
 		</div>
-		<div id="corpoPagina"></div>
+		<div id="blocoInfos" data-interruptor=0>
+			<button class="fecharDireita" onclick="switchBloco('1')">&times;</button>
+			<div id="corpoInfos"></div>
+		</div>
+		<div id="corpo1" class="corpoPagina"></div>
+		<div id="corpo2" class="corpoPagina"></div>
 	</div>
 </body>
 </html>

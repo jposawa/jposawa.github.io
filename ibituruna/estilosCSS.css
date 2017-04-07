@@ -33,6 +33,7 @@ body
 		top:0;
 		left:14%;
 		box-shadow: 0 0 0.1rem 0.2rem #111;
+		overflow-x: hidden;
 		z-index:5;
 	}
 
@@ -58,11 +59,25 @@ body
 		z-index:8;
 	}
 
-	#corpoPagina
+	#blocoContatos
+	{
+		position:absolute;
+		width:80%;
+		height:70%;
+		padding:1.5%;
+		top:20%;
+		left:100%;
+		background:#333;
+		color:#47a;
+		box-shadow: none;
+	}
+
+	.corpoPagina
 	{
 		position: absolute;
 		width:80%;
 		height:85%;
+		padding:1.5%;
 		top:15%;
 		left:20%;
 		z-index: 9;
@@ -72,6 +87,7 @@ body
 	{
 		height:100%;
 		cursor:pointer;
+		user-select:none;
 	}
 
 	.menuLateral
@@ -95,5 +111,28 @@ body
 		background:#777;
 		box-shadow: 0 0 0.1rem 0.05rem #333;
 		padding-left:0.7rem;
+	}
+
+	.fecharDireita
+	{
+		position:absolute;
+		font-size:1.5rem;
+		width:2rem;
+		height:2rem;
+		padding: 0 0 0.2rem 0;
+		text-align:center;
+		top:0;
+		right:0;
+		background:inherit;
+		color:#a00;
+		z-index:10;
+	}
+
+	.fecharDireita:hover
+	{
+		background:#a00;
+		color:#333;
+		cursor:pointer;
+		z-index:10;
 	}
 }
