@@ -139,4 +139,17 @@ body
 	{
 		user-select:none;
 	}
+
+	.link
+	{
+		color:#aa0;
+		cursor:pointer;
+		z-index:10;
+	}
+
+	.link:hover
+	{
+		color:#cc0;
+		box-shadow: 0 0 0.1rem 0.1rem #fff;
+	}
 }
