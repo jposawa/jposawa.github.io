@@ -37,39 +37,36 @@ function switchBloco(alvo)
 
 	switch(numBloco)
 	{
+		case 0: //FECHA BLOCOINFOS
+			interruptor = document.getElementById("blocoInfos");
+			$(interruptor).css("left","100%");
+			$(interruptor).css("box-shadow","none");
+			interruptor.setAttribute("data-interruptor","0");
+		break;
+
 		case 1: //BLOCOINFOS COM DADOS DE CONTATOS
 			interruptor = document.getElementById("blocoInfos");
 			estadoInterruptor = parseInt(interruptor.getAttribute("data-interruptor"));
+			$("#corpoInfos").load("contatos.html");
+
 			if(estadoInterruptor == 0)
 			{
-				$("#corpoInfos").load("contatos.html");
 				$(interruptor).css("left","20%");
 				$(interruptor).css("box-shadow","0 0 0.2rem 0.2rem #222");
 				interruptor.setAttribute("data-interruptor","1");
-			}
-			else
-			{
-				$(interruptor).css("left","100%");
-				$(interruptor).css("box-shadow","none");
-				interruptor.setAttribute("data-interruptor","0");
 			}
 		break;
 
 		case 2:
 			interruptor = document.getElementById("blocoInfos");
 			estadoInterruptor = parseInt(interruptor.getAttribute("data-interruptor"));
+			$("#corpoInfos").load("sobre.html");
+
 			if(estadoInterruptor == 0)
 			{
-				$("#corpoInfos").load("sobre.html");
 				$(interruptor).css("left","20%");
 				$(interruptor).css("box-shadow","0 0 0.2rem 0.2rem #222");
 				interruptor.setAttribute("data-interruptor","1");
-			}
-			else
-			{
-				$(interruptor).css("left","100%");
-				$(interruptor).css("box-shadow","none");
-				interruptor.setAttribute("data-interruptor","0");
 			}
 		break;
 	}

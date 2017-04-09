@@ -87,7 +87,6 @@ body
 	{
 		height:100%;
 		cursor:pointer;
-		user-select:none;
 	}
 
 	.menuLateral
@@ -134,5 +133,10 @@ body
 		color:#333;
 		cursor:pointer;
 		z-index:10;
+	}
+
+	.naoSeleciona
+	{
+		user-select:none;
 	}
 }
