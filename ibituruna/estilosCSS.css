@@ -45,8 +45,7 @@ body
 		top:0;
 		left:0;
 		text-align: center;
-		border: 0px solid #900;
-		z-index:8;
+		z-index:7;
 	}
 
 	#menuPrincipal
@@ -56,7 +55,7 @@ body
 		height:100%;
 		background:#555;
 		color:#eee;
-		z-index:8;
+		z-index:7;
 	}
 
 	#blocoInfos
@@ -64,12 +63,13 @@ body
 		position:absolute;
 		width:80%;
 		height:70%;
-		padding:1.5%;
+		padding:1rem 2rem 1rem 1rem;
 		top:20%;
 		left:100%;
 		background:#333;
 		color:#47a;
 		box-shadow: none;
+		z-index:8;
 	}
 
 	.corpoPagina
@@ -80,7 +80,7 @@ body
 		padding:1.5%;
 		top:15%;
 		left:20%;
-		z-index: 9;
+		z-index: 6;
 	}
 
 	.logo
@@ -124,7 +124,7 @@ body
 		right:0;
 		background:inherit;
 		color:#a00;
-		z-index:10;
+		z-index:8;
 	}
 
 	.fecharDireita:hover
@@ -132,7 +132,6 @@ body
 		background:#a00;
 		color:#333;
 		cursor:pointer;
-		z-index:10;
 	}
 
 	.naoSeleciona
@@ -150,6 +149,5 @@ body
 	.link:hover
 	{
 		color:#cc0;
-		box-shadow: 0 0 0.1rem 0.1rem #fff;
 	}
 }
