@@ -76,11 +76,16 @@ body
 	{
 		position: absolute;
 		width:80%;
-		height:85%;
+		height:82%;
 		padding:1.5%;
-		top:15%;
-		left:20%;
-		z-index: 6;
+		top:18%;
+		right:0;
+		z-index:5;
+	}
+
+	#corpo2
+	{
+		right:100%;
 	}
 
 	.logo
