@@ -1,14 +1,35 @@
 <html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="imgs/favicon.png" />
+		<title>sawa</title>
 
-<link rel="stylesheet" href="estetica.css">
+		<link rel="stylesheet" href="estetica.css">
 
-<script src="comportamento.js"></script>
-</head>
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="comportamento.js"></script>
+	</head>
 
-<body>
-<a href="loginSigaa.html">E aew</a>
-</body>
+	<body>
+		<div id="cabecalho" class="transicaoPadrao">
+			<div class="logotipoCabecalho naoSeleciona">
+				JP&#13037;sawa<span></span>
+				<!--img src="imgs/logotipo.png"-->
+			</div>
+
+			<div id="slotMenuSuperior">
+				<ul id="menuSuperior">
+					<li onclick="carregaPagina('inicio.html')">Início</li>
+					<li>Sobre</li>
+					<li onclick="carregaPagina('curriculo.html')">Currículo</li>
+					<li>Contato</li>
+				</ul>
+			</div>
+		</div>
+		<div id="corpoSite">
+			<div id="corpo1"></div>
+			<div id="corpo2"></div>
+		</div>
+	</body>
 </html>
