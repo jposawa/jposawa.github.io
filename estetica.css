@@ -84,7 +84,18 @@
 		top:10%;
 		left:15%;
 		background:#eee;
+		overflow-x: none;
 		z-index:6;
+	}
+	#corpo1, #corpo2
+	{
+		position:absolute;
+		width:100%;
+		height: 100%;
+		top:0;
+		right:0;
+		background:#eee;
+		z-index:7;
 	}
 
 	.logotipoCabecalho
