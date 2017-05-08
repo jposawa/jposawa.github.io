@@ -15,19 +15,19 @@ function carregaPagina(url)
 
 	if(url != paginaAtual)
 	{
-		if(parseInt($("#corpo1").css("top")) == 0)
+		if(parseInt($("#corpo2").css("opacity")) == 0)
 		{
-			alert("entrou com corpo1 indo esconder");
+			//alert("entrou com corpo1 indo esconder");
 			$("#corpo2").load(url);
-			$("#corpo1").css({"width":"0","opacity":"0","z-index":"5"});
-			$("#corpo2").css({"width":"100%","opacity":"1","z-index":"7"});
+			$("#corpo1").css({"visibility":"hidden","opacity":"0","z-index":"5"});
+			$("#corpo2").css({"visibility":"visible","opacity":"1","z-index":"7"});
 		}
 		else
 		{
-			alert("vez do corpo2 esconder");
+			//alert("vez do corpo2 esconder");
 			$("#corpo1").load(url);
-			$("#corpo2").css({"width":"0","opacity":"0","z-index":"5"});
-			$("#corpo1").css({"width":"100%","opacity":"1","z-index":"7"});	
+			$("#corpo2").css({"visibility":"hidden","opacity":"0","z-index":"5"});
+			$("#corpo1").css({"visibility":"visible","opacity":"1","z-index":"7"});	
 		}
 		paginaAtual = url;
 	}
