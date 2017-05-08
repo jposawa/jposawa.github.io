@@ -95,6 +95,7 @@
 		top:0;
 		right:0;
 		background:#eee;
+		overflow-x: none;
 		z-index:7;
 	}
 
