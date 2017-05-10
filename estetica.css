@@ -85,6 +85,7 @@
 		left:15%;
 		background:#eee;
 		overflow-x: hidden;
+		box-shadow: 0 0.2rem 0.5rem #333;
 		z-index:6;
 	}
 	#corpo1, #corpo2
