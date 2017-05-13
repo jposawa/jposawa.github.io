@@ -1,0 +1,41 @@
+<html5>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="imgs/logo.png" />
+	<title>Coding Dojo SMD</title>
+	<link rel="stylesheet" type="text/css" href="estilosCSS.css">
+	<!--script src="/js/jquery-1.4.2.min.js"></script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!--script src="jquery-2.1.4.min.js"></script-->
+	<script src="comportamentoJS.js"></script>
+</head>
+
+<body>
+	<div id="corpoSite">
+		<div id="cabecalho">
+		</div>
+		<div id="menuPrincipal">
+			<ul class="menuLateral naoSeleciona">
+				<img src="imgs/logotipoW.png">
+				<li class="inicio" onclick="carregaPagina(this)">INÍCIO</li>
+				<li>
+					QUESTÕES KATA
+					<ul>
+						<li class="kata1" onclick="carregaPagina(this)">Kata 1 / 2017</li>
+					</ul>
+				</li>
+
+				<li onclick="switchBloco('1')">CONTATO</li>
+				<li onclick="switchBloco('2')">SOBRE</li>
+			</ul>
+		</div>
+		<div id="blocoInfos" data-interruptor=0>
+			<button class="fecharDireita naoSeleciona" onclick="switchBloco('0')">&times;</button>
+			<div id="corpoInfos"></div>
+		</div>
+		<div id="corpo1" class="corpoPagina"></div>
+		<div id="corpo2" class="corpoPagina"></div>
+	</div>
+</body>
+</html>

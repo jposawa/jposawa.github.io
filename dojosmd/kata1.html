@@ -1,0 +1,93 @@
+<p>Antes de mais nada, é importante lembrar que a forma como as questões estão feitas no Kata não são a melhor maneira, justamente para estimular que vocês modifiquem a resolução com as melhorias que julgarem mais adequadas.</p>
+<p>Nesse primeiro momento, as questões foram resolvidas em Portugol para abstrair o algoritmo da sintaxe de programação. De modo que seguindo esses passos em qualquer linguagem você pode conseguir reproduzir o resultado.</p>
+<p>Bom treino.</p>
+<br>
+<div>
+	<h1>Questão 01</h1>
+	<h2>Enunciado</h2>
+	<p>Faça um algoritmo que o Usuário informa duas notas diferentes, de 0 a 10. A média das duas notas é calculada e baseado em seu resultado, informa se o aluno a Média e se o aluno está Reprovado, vai para Avaliação Final ou foi Aprovado.</p>
+	<p>Os critérios para os resultados são: À partir de 7, o aluno está Aprovado; À partir de 4 e menos que 7, vai para Avaliação Final; Abaixo de 4 é Reprovado.</p>
+	<br>
+	<h2>Resolução</h2>
+	<p>O primeiro passo é identificar o problema e quais os passos para resolver. Nesse caso o problema é calcular a média e informar qual a situação do aluno de acordo com ela.</p>
+	<p>Dessa maneira, primeiro o sistema recebe as duas notas, que o usuário insere, e faz os cálculos necessários, além de categorizar seguindo suas condições.</p>
+	<p>Tendo isso em mente, vamos ao algoritmo em Portugol:</p>
+	<i class="codigo">
+		<p>Inicio</p>
+		<p>&nbsp;&nbsp;real nota1, nota2, soma, media</p>
+		<br>
+		<p>&nbsp;&nbsp;escrever "Insira a primeira nota"</p>
+		<p>&nbsp;&nbsp;ler nota1</p>
+		<p>&nbsp;&nbsp;escrever "Insira a segunda nota"</p>
+		<p>&nbsp;&nbsp;ler nota2</p>
+		<br>
+		<p>&nbsp;&nbsp;soma <- nota1+nota2</p>
+		<p>&nbsp;&nbsp;media <- soma/2</p>
+		<p>&nbsp;&nbsp;se media >= 7 entao</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;escrever "Aprovado com a Média ",media</p>
+		<p>&nbsp;&nbsp;fimse</p>
+		<p>&nbsp;&nbsp;se media < 6 E media >= 4 entao</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;escrever "Vai para a AF com a Média ",media</p>
+		<p>&nbsp;&nbsp;fimse</p>
+		<p>&nbsp;&nbsp;se media < 4 entao</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;escrever "Reprovado com Média ",media</p>
+		<p>&nbsp;&nbsp;fimse</p>
+		<p>Fim.</p>
+	</i>
+	<br>
+	<h1>Questão 02</h1>
+	<h2>Enunciado</h2>
+	<p>Você recebe a solicitação de desenvolver um algoritmo para calcular quanto deve ser cobrado de multa para motoristas que passam acima da velocidade máxima de um sensor.</p>
+	<p>A solicitação pede que para demonstrar seu algoritmo seja inserido no programa a velocidade limite e a velocidade de demonstração na qual o veículo hipotético teria passado.</p>
+	<p>É pedido que o programa tenha uma tolerância de 5% da velocidade do veículo para a velocidade limite. Além disso, é determinado que existem quatro níveis de infração, a serem definidos dependendo de quantos porcento (%) o veículo estava acima da velocidade limite. A cada 15%, um nível de gravidade é acrescentado, recebendo os nomes de LEVE, MODERADA, GRAVE e GRAVÍSSIMA.</p>
+	<p>O resultado desejado é a informação da velocidade, sem casas decimais, da velocidade do veículo, de qual nível de gravidade a infração se enquadra, além do preço da multa. Sabendo que ela é calculada tendo um valor base de R$ 110,00 acrescidos de R$ 25,00 para cada nível de gravidade acima de LEVE.</p>
+	<br>
+	<h2>Resolução</h2>
+	<p>Antes de ir para a codificação, é importante determinar exatamente quais dados você tem e quais informações precisa passar para o usuário.</p>
+	<p>Nesse caso sabemos que a Velocidade Máxima permitida será inserida pelo usuário, assim como a velocidade do veículo. Sabemos também que até 5% acima da Velocidade Máxima é tolerado como não havendo infração.</p>
+	<p>A cada 15% acima da velocidade, a infração sobe um nível. Então temos quatro intervalos: De 5% até 15% acima da velocidade, de 16% até 30% e de 31% até 45% e acima de 45%.</p>
+	<br>
+	<p>Sabendo isso, vamos ao algoritmo em Portugol:</p>
+	<i class="codigo">
+		<p>Inicio</p>
+		<p>&nbsp;&nbsp;inteiro vel_maxima, vel_veiculo, vel_tolerada, vel_moderada, vel_grave, vel_gravissima</p>
+		<p>&nbsp;&nbsp;real multa</p>
+		<p>&nbsp;&nbsp;texto situacao</p>
+		<br>
+		<p>&nbsp;&nbsp;escrever "Insira a Velocidade Máxima do a via"</p>
+		<p>&nbsp;&nbsp;ler vel_maxima</p>
+		<p>&nbsp;&nbsp;vel_tolerada <- vel_maxima + vel_maxima * 5/100</p>
+		<p>&nbsp;&nbsp;vel_moderada <- vel_maxima + vel_maxima * 15/100</p>
+		<p>&nbsp;&nbsp;vel_grave <- vel_maxima + vel_maxima * 30/100</p>
+		<p>&nbsp;&nbsp;vel_gravissima <- vel_maxima + vel_maxima * 45/100</p>
+		<br>
+		<p>&nbsp;&nbsp;escrever "Insira a Velocidade do Veículo na via"</p>
+		<p>&nbsp;&nbsp;ler vel_veiculo</p>
+		<br>
+		<p>&nbsp;&nbsp;se vel_veiculo <= vel_tolerada entao</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;situacao "velocidade Regular"
+		<p>&nbsp;&nbsp;se vel_veiculo > vel_tolerada entao</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;multa <- 110</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;situacao <- "Infração Leve. A multa a ser paga é de R$"</p>
+		<p>&nbsp;&nbsp;fimse</p>
+		<p>&nbsp;&nbsp;se vel_veiculo > vel_moderada entao</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;multa <- multa + 25</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;situacao <- "Infração Moderada. A multa a ser paga é de R$"</p>
+		<p>&nbsp;&nbsp;fimse</p>
+		<p>&nbsp;&nbsp;se vel_veiculo > vel_grave entao</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;multa <- multa + 25</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;situacao <- "Infração Grave. A multa a ser paga é de R$"</p>
+		<p>&nbsp;&nbsp;fimse</p>
+		<p>&nbsp;&nbsp;se vel_veiculo > vel_gravissima entao</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;multa <- multa + 25</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;situacao <- "Infração Gravíssima. A multa a ser paga é de R$"</p>
+		<p>&nbsp;&nbsp;fimse</p>
+		<br>
+		<p>&nbsp;&nbsp;escrever "O veículo estava a ", vel_veiculo, " o que representa ", situacao, multa</p>
+		<p>Fim.
+	</i>
+	<br><br>
+	<h2>Proposta</h2>
+	<p>O que acha de agora otimizar os algoritmos ou os reproduzir dentro do Game Maker?</p>
+	<p>Qualquer dúvida tiramos no Coding Dojo. Mas se não aguentar esperar, pode entrar em contato com nosso bolsista :D</p>
+</div>
