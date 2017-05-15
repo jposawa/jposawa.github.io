@@ -16,7 +16,7 @@
 		<div id="cabecalho">
 		</div>
 		<div id="menuPrincipal">
-			<span id="chamaMenu" data-interruptor=0 onclick="switchBloco('3')"></span>
+			<span id="chamaMenu" class="naoSeleciona" data-interruptor=0 onclick="switchBloco('2')">&#9776;</span>
 			<ul class="menuLateral naoSeleciona">
 				<img onclick="carregaPagina('inicio.html',1)" src="imgs/logotipoW.png">
 				<li class="inicio" onclick="carregaPagina(this)">INÍCIO</li>
@@ -27,8 +27,8 @@
 					</ul>
 				</li>
 
-				<li onclick="switchBloco('1')">CONTATO</li>
-				<li onclick="switchBloco('2')">SOBRE</li>
+				<li onclick="switchBloco('1','contatos.html')">CONTATO</li>
+				<li onclick="switchBloco('1','sobre.html')">SOBRE</li>
 			</ul>
 		</div>
 
@@ -37,8 +37,8 @@
 			<div id="corpoInfos"></div>
 		</div>
 
-		<div id="corpo1" class="corpoPagina"></div>
-		<div id="corpo2" class="corpoPagina"></div>
+		<div id="corpo1" class="corpoPagina" onclick="switchBloco(0)"></div>
+		<div id="corpo2" class="corpoPagina" onclick="switchBloco(0)"></div>
 
 		<p id="rodape">Website por João Pedro Osawa</p>
 	</div>

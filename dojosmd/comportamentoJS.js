@@ -109,7 +109,7 @@ function carregaPagina(nomePagina,linkPassado)
 	}
 }*/
 
-function switchBloco(alvo)
+function switchBloco(alvo,paginaExtra)
 {
 	var numBloco = parseInt(alvo);
 	var interruptor;
@@ -126,16 +126,16 @@ function switchBloco(alvo)
 			if(screen.width < 800)
 			{
 				interruptor = document.getElementById("chamaMenu");
-				$("#chamaMenu").html("");
+				$("#chamaMenu").html("&#9776;");
 
 				$("#chamaMenu").css
 				({
 					"right":"-2rem",
 					"background":"#555",
 					"color":"#eee",
-					"background-image":"url('imgs/logo2.png')",
+					/*"background-image":"url('imgs/logo2.png')",
 					"background-repeat":"no-repeat",
-					"background-size":"contain"
+					"background-size":"contain"*/
 				});
 
 				$("#menuPrincipal").css
@@ -148,9 +148,11 @@ function switchBloco(alvo)
 		break;
 
 		case 1: //BLOCOINFOS COM DADOS DE CONTATOS
+			switchBloco(0);
+
 			interruptor = document.getElementById("blocoInfos");
 			estadoInterruptor = parseInt(interruptor.getAttribute("data-interruptor"));
-			$("#corpoInfos").load("contatos.html");
+			$("#corpoInfos").load(paginaExtra);
 
 			if(estadoInterruptor == 0)
 			{
@@ -161,19 +163,6 @@ function switchBloco(alvo)
 		break;
 
 		case 2:
-			interruptor = document.getElementById("blocoInfos");
-			estadoInterruptor = parseInt(interruptor.getAttribute("data-interruptor"));
-			$("#corpoInfos").load("sobre.html");
-
-			if(estadoInterruptor == 0)
-			{
-				$(interruptor).css("left","20%");
-				$(interruptor).css("box-shadow","0 0 0.2rem 0.2rem #222");
-				interruptor.setAttribute("data-interruptor","1");
-			}
-		break;
-
-		case 3:
 
 			if(screen.width < 800)
 			{
@@ -201,16 +190,18 @@ function switchBloco(alvo)
 				}
 				else
 				{
-					$("#chamaMenu").html("");
+					switchBloco(0);
+
+					/*$("#chamaMenu").html("&#9776;");
 
 					$("#chamaMenu").css
 					({
 						"right":"-2rem",
 						"background":"#555",
 						"color":"#eee",
-						"background-image":"url('imgs/logo2.png')",
+						/*"background-image":"url('imgs/logo2.png')",
 						"background-repeat":"no-repeat",
-						"background-size":"contain"
+						"background-size":"contain"*
 					});
 
 					$("#menuPrincipal").css
@@ -218,7 +209,7 @@ function switchBloco(alvo)
 						"left":"-50%"
 					});
 
-					interruptor.setAttribute("data-interruptor","0");
+					interruptor.setAttribute("data-interruptor","0");*/
 				}
 			}
 		break;
