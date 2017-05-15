@@ -49,17 +49,39 @@ function carregaPagina(nomePagina,linkPassado)
 
 	if(url != paginaAtual)
 	{
-		if(parseInt($("#corpo1").css("right")) == 0)
+		if(screen.width < 800) //TELA MOBILE
 		{
-			$("#corpo2").load(url);
-			$("#corpo1").css({"right":"100%","z-index":"5"});
-			$("#corpo2").css({"right":"0","z-index":"6"});
+			if(parseInt($("#corpo1").css("left")) == screen.width)
+			{
+				$("#corpo1").load(url);
+				$("#corpo1").scrollTop(0);
+				$("#corpo2").css({"left":"100%","z-index":"5"});
+				$("#corpo1").css({"left":"10%","z-index":"6"});
+			}
+			else
+			{
+				$("#corpo2").load(url);
+				$("#corpo2").scrollTop(0);
+				$("#corpo1").css({"left":"100%","z-index":"5"});
+				$("#corpo2").css({"left":"10%","z-index":"6"});	
+			}
 		}
-		else
+		else //TELA DESKTOP
 		{
-			$("#corpo1").load(url);
-			$("#corpo2").css({"right":"100%","z-index":"5"});
-			$("#corpo1").css({"right":"0","z-index":"6"});	
+			if(parseInt($("#corpo1").css("right")) == 0)
+			{
+				$("#corpo2").load(url);
+				$("#corpo2").scrollTop(0);
+				$("#corpo1").css({"right":"100%","z-index":"5"});
+				$("#corpo2").css({"right":"0","z-index":"6"});
+			}
+			else
+			{
+				$("#corpo1").load(url);
+				$("#corpo1").scrollTop(0);
+				$("#corpo2").css({"right":"100%","z-index":"5"});
+				$("#corpo1").css({"right":"0","z-index":"6"});	
+			}
 		}
 		paginaAnterior = paginaAtual;
 		paginaAtual = url;

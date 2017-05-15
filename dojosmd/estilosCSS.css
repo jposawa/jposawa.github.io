@@ -130,7 +130,8 @@ body
 
 	#corpo2
 	{
-		right:100%;
+		right:auto;
+		left:100%;
 	}
 
 	.logo
@@ -340,6 +341,7 @@ body
 	#corpo2
 	{
 		right:100%;
+		left:auto;
 	}
 
 	.logo
