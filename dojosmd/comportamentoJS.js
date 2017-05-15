@@ -4,20 +4,20 @@ $(document).ready(function()
 	//PÁGINA INICIAL
 	$("#corpo1").load("inicio.html");
 	paginaAtual = "inicio.html";
-	destacaPagina(paginaAtual.slice(0,paginaAtual.length-5))
+	destacaPagina(paginaAtual.slice(0,paginaAtual.length-5)) //CHAMANDO FUNÇÃO COM O NOME RETIRANDO OS 5 CARACTERES FINAIS DA STRING (QUE NESSE CASO É ".HTML")
 })
 
 function destacaPagina(pagina,anterior)
 {
-	//alert(pagina);
-	$("."+pagina).css
+	$("."+pagina).css //MARCA NO MENU A PÁGINA ATUAL
 	({
 		"background":"#111",
-		"box-shadow":"0 0 0.1rem 0.05rem #333",
 		"padding-left":"0.7rem"
 	});
+	if(screen.width >= 800)
+		$("."+pagina).css("box-shadow","0 0 0.1rem 0.05rem #333");
 
-	$("."+anterior).css
+	$("."+anterior).css //DESMARCA A PÁGINA ANTERIOR NO MENU
 	({
 		"background":"",
 		"box-shadow":"",
@@ -25,32 +25,38 @@ function destacaPagina(pagina,anterior)
 	});
 }
 
-function carregaPagina(nomePagina)
+function carregaPagina(nomePagina,linkPassado)
 {
-	var url = $(nomePagina).attr("class") + ".html";
-	//alert(url);
-	//$("#corpoPagina").load(url);
+	linkPassado = parseInt(linkPassado);
+	switch(linkPassado)
+	{
+		case 1: //LINK PASSADO DIRETAMENTE NA FUNÇÃO
+			var url = nomePagina;
+			break;
 
-	//alert($(url).attr("name"));
+		default: //LINK NÃO É PASSADO DIRETAMENTE, PEGA DA CLASSE
+			var url = $(nomePagina).attr("class") + ".html";
+			break;
+	}
 
-	if(parseInt($("#blocoInfos").attr("data-interruptor")) == "1")
+	/*if(parseInt($("#blocoInfos").attr("data-interruptor")) == "1")
 	{
 		$("#blocoInfos").css({"left":"100%", "box-shadow":"none"});
 		$("#blocoInfos").attr("data-interruptor","0");
-	}
+	}*/
+
+	switchBloco(0);
 
 	if(url != paginaAtual)
 	{
 		if(parseInt($("#corpo1").css("right")) == 0)
 		{
-			//alert("entrou com corpo1 indo esconder");
 			$("#corpo2").load(url);
 			$("#corpo1").css({"right":"100%","z-index":"5"});
 			$("#corpo2").css({"right":"0","z-index":"6"});
 		}
 		else
 		{
-			//alert("vez do corpo2 esconder");
 			$("#corpo1").load(url);
 			$("#corpo2").css({"right":"100%","z-index":"5"});
 			$("#corpo1").css({"right":"0","z-index":"6"});	
@@ -89,11 +95,34 @@ function switchBloco(alvo)
 
 	switch(numBloco)
 	{
-		case 0: //FECHA BLOCOINFOS
+		case 0: //FECHA BLOCOINFOS E MENU LATERAL
 			interruptor = document.getElementById("blocoInfos");
 			$(interruptor).css("left","100%");
 			$(interruptor).css("box-shadow","none");
 			interruptor.setAttribute("data-interruptor","0");
+
+			if(screen.width < 800)
+			{
+				interruptor = document.getElementById("chamaMenu");
+				$("#chamaMenu").html("");
+
+				$("#chamaMenu").css
+				({
+					"right":"-2rem",
+					"background":"#555",
+					"color":"#eee",
+					"background-image":"url('imgs/logo2.png')",
+					"background-repeat":"no-repeat",
+					"background-size":"contain"
+				});
+
+				$("#menuPrincipal").css
+				({
+					"left":"-50%"
+				});
+
+				interruptor.setAttribute("data-interruptor","0");
+			}
 		break;
 
 		case 1: //BLOCOINFOS COM DADOS DE CONTATOS
@@ -119,6 +148,56 @@ function switchBloco(alvo)
 				$(interruptor).css("left","20%");
 				$(interruptor).css("box-shadow","0 0 0.2rem 0.2rem #222");
 				interruptor.setAttribute("data-interruptor","1");
+			}
+		break;
+
+		case 3:
+
+			if(screen.width < 800)
+			{
+				interruptor = document.getElementById("chamaMenu");
+				estadoInterruptor = parseInt(interruptor.getAttribute("data-interruptor"));
+
+				if(estadoInterruptor == 0)
+				{
+					$("#chamaMenu").html("&times;");
+
+					$("#chamaMenu").css
+					({
+						"right":"0",
+						"background":"#ff0",
+						"color":"#555",
+						"background-image":"none"
+					});
+
+					$("#menuPrincipal").css
+					({
+						"left":"0"
+					});
+
+					interruptor.setAttribute("data-interruptor","1");
+				}
+				else
+				{
+					$("#chamaMenu").html("");
+
+					$("#chamaMenu").css
+					({
+						"right":"-2rem",
+						"background":"#555",
+						"color":"#eee",
+						"background-image":"url('imgs/logo2.png')",
+						"background-repeat":"no-repeat",
+						"background-size":"contain"
+					});
+
+					$("#menuPrincipal").css
+					({
+						"left":"-50%"
+					});
+
+					interruptor.setAttribute("data-interruptor","0");
+				}
 			}
 		break;
 	}

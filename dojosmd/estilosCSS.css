@@ -23,7 +23,8 @@ body
 	transition:none;
 	background:#222;
 }
-/*@media screen and (min-width: 350px)
+
+@media screen and (min-width: 320px)
 {
 	#corpoSite
 	{
@@ -31,7 +32,6 @@ body
 		position:absolute;
 		width:100%;
 		height:100%;
-		max-height:100%;
 		top:0;
 		left:0;
 		box-shadow: 0 0 0.1rem 0.2rem #111;
@@ -43,7 +43,8 @@ body
 	{
 		position:absolute;
 		width:100%;
-		height:15%;
+		height:auto;
+		max-height:50%;
 		top:0;
 		left:0;
 		text-align: center;
@@ -53,11 +54,29 @@ body
 	#menuPrincipal
 	{
 		position:absolute;
-		width:20%;
+		width:50%;
 		height:100%;
+		top:0;
+		left:-50%;
 		background:#555;
 		color:#eee;
 		z-index:8;
+	}
+
+	#menuPrincipal>span
+	{
+		position:absolute;
+		width:2rem;
+		height:2rem;
+		top:1%;
+		right:-2rem;
+		background:#333;
+		background-image: url("imgs/logo2.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		text-align: center;
+		font-size:1.5rem;
+		z-index:9;
 	}
 
 	#blocoInfos
@@ -74,21 +93,39 @@ body
 		z-index:7;
 	}
 
+	#rodape
+	{
+		position:absolute;
+		width:100%;
+		text-align:center;
+		font-size:80%;
+		bottom:0;
+		left:0;
+		background:#555;
+		color:#eee;
+		z-index:8;
+	}
+
 	.corpoPagina
 	{
 		position: absolute;
-		width:80%;
+		width:85%;
 		height:100%;
-		padding:1% 1% 2% 2%;
+		padding: 1% 5% 10% 0;
 		top:0;
-		right:0;
-		z-index:6;
+		left:15%;
+		z-index:8;
 		overflow-y: auto;
 	}
 
 	.corpoPagina div
 	{
 		padding-bottom:1.5%;
+	}
+
+	.corpoPagina h1
+	{
+		text-align:center;
 	}
 
 	#corpo2
@@ -113,15 +150,9 @@ body
 
 	.menuLateral img
 	{
-		width:100%;
-		padding:10% 5% 15% 5%;
-	}
-
-	.menuLateral img:hover
-	{
-		cursor:pointer;
-		padding: 10% 3% 14% 3%;
-		background:#333;
+		width:80%;
+		margin-left:10%;
+		padding:25% 5% 20% 5%;
 	}
 
 	.menuLateral li
@@ -142,7 +173,6 @@ body
 	.menuLateral>li:hover
 	{
 		background:#777;
-		box-shadow: 0 0 0.1rem 0.05rem #333;
 		padding-left:0.7rem;
 	}
 
@@ -209,7 +239,7 @@ body
 	{
 		color:#258;
 	}
-}*/
+}
 
 @media screen and (min-width:800px)
 {
@@ -243,9 +273,18 @@ body
 		position:absolute;
 		width:20%;
 		height:100%;
+		top:0;
+		left:0;
 		background:#555;
 		color:#eee;
 		z-index:8;
+	}
+
+	#menuPrincipal>span
+	{
+		visibility: hidden;
+		opacity:0;
+		display:none;
 	}
 
 	#blocoInfos
@@ -280,11 +319,16 @@ body
 		position: absolute;
 		width:80%;
 		height:100%;
-		padding:1.5% 1% 2.5% 2%;
+		padding:1.5% 1.5% 2.5% 2%;
 		top:0;
 		right:0;
 		z-index:6;
 		overflow-y: auto;
+	}
+
+	.corpoPagina h1
+	{
+		text-align:center;
 	}
 
 	.corpoPagina div
@@ -315,6 +359,7 @@ body
 	.menuLateral img
 	{
 		width:100%;
+		margin-left:0;
 		padding:10% 5% 15% 5%;
 	}
 

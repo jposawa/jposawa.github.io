@@ -16,13 +16,14 @@
 		<div id="cabecalho">
 		</div>
 		<div id="menuPrincipal">
+			<span id="chamaMenu" data-interruptor=0 onclick="switchBloco('3')"></span>
 			<ul class="menuLateral naoSeleciona">
-				<img src="imgs/logotipoW.png">
+				<img onclick="carregaPagina('inicio.html',1)" src="imgs/logotipoW.png">
 				<li class="inicio" onclick="carregaPagina(this)">INÍCIO</li>
 				<li>
 					QUESTÕES KATA
 					<ul>
-						<li class="kata1" onclick="carregaPagina(this)">Kata 1 / 2017</li>
+						<li class="kata1" onclick="carregaPagina(this)">K1/2017</li>
 					</ul>
 				</li>
 
@@ -30,7 +31,7 @@
 				<li onclick="switchBloco('2')">SOBRE</li>
 			</ul>
 		</div>
-		
+
 		<div id="blocoInfos" data-interruptor=0>
 			<button class="fecharDireita naoSeleciona" onclick="switchBloco('0')">&times;</button>
 			<div id="corpoInfos"></div>
