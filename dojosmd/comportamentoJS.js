@@ -5,6 +5,7 @@ $(document).ready(function()
 	$("#corpo1").load("inicio.html");
 	paginaAtual = "inicio.html";
 	destacaPagina(paginaAtual.slice(0,paginaAtual.length-5)) //CHAMANDO FUNÇÃO COM O NOME RETIRANDO OS 5 CARACTERES FINAIS DA STRING (QUE NESSE CASO É ".HTML")
+	alert(screen.width);
 })
 
 function destacaPagina(pagina,anterior)
