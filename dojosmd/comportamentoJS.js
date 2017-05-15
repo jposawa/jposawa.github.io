@@ -155,7 +155,7 @@ function switchBloco(alvo,paginaExtra)
 			$("#corpoInfos").css("opacity","0");
 			$("#corpoInfos").load(paginaExtra);
 			$("#corpoInfos").scrollTop(0);
-			$("#corpoInfos").css("pacity","1");
+			$("#corpoInfos").css("opacity","1");
 
 			if(estadoInterruptor == 0)
 			{
