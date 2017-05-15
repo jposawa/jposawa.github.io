@@ -119,7 +119,7 @@ function switchBloco(alvo,paginaExtra)
 	{
 		case 0: //FECHA BLOCOINFOS E MENU LATERAL
 			interruptor = document.getElementById("blocoInfos");
-			$(interruptor).css("left","100%");
+			$(interruptor).css("right","-90%");
 			$(interruptor).css("box-shadow","none");
 			interruptor.setAttribute("data-interruptor","0");
 
@@ -153,10 +153,11 @@ function switchBloco(alvo,paginaExtra)
 			interruptor = document.getElementById("blocoInfos");
 			estadoInterruptor = parseInt(interruptor.getAttribute("data-interruptor"));
 			$("#corpoInfos").load(paginaExtra);
+			$("#corpoInfos").scrollTop(0);
 
 			if(estadoInterruptor == 0)
 			{
-				$(interruptor).css("left","20%");
+				$(interruptor).css("right","0");
 				$(interruptor).css("box-shadow","0 0 0.2rem 0.2rem #222");
 				interruptor.setAttribute("data-interruptor","1");
 			}
