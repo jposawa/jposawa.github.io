@@ -152,8 +152,10 @@ function switchBloco(alvo,paginaExtra)
 
 			interruptor = document.getElementById("blocoInfos");
 			estadoInterruptor = parseInt(interruptor.getAttribute("data-interruptor"));
+			$("#corpoInfos").css("opacity","0");
 			$("#corpoInfos").load(paginaExtra);
 			$("#corpoInfos").scrollTop(0);
+			$("#corpoInfos").css("Opacity","1");
 
 			if(estadoInterruptor == 0)
 			{
