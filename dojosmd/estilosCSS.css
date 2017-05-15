@@ -322,6 +322,7 @@ body
 		padding:1.5% 1.5% 2.5% 2%;
 		top:0;
 		right:0;
+		left:auto;
 		z-index:6;
 		overflow-y: auto;
 	}
