@@ -149,7 +149,7 @@ function switchBloco(alvo,paginaExtra)
 			}
 		break;
 
-		case 1: //BLOCOINFOS COM DADOS DE CONTATOS
+		case 1: //BLOCOINFOS COM PÁGINA SENDO CARREGADA ATRAVÉS DO ARGUMENTO DA FUNÇÃO
 			switchBloco(0);
 
 			interruptor = document.getElementById("blocoInfos");
@@ -167,7 +167,7 @@ function switchBloco(alvo,paginaExtra)
 			}
 		break;
 
-		case 2:
+		case 2: //CHAMA OU ESCONDE O MENU LATERAL EM CASO DE ESTAR ACESSANDO POR ALGUM DISPOSITIVO MOBILE
 
 			if(screen.width < 800)
 			{
