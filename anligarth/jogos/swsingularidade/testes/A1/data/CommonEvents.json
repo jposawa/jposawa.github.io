@@ -1,0 +1,7 @@
+[
+null,
+{"id":1,"list":[{"code":101,"indent":0,"parameters":["",0,2,1]},{"code":401,"indent":0,"parameters":["Anligarth: O jogo ainda não está pronto. Por ser um "]},{"code":401,"indent":0,"parameters":["jogo feito por fãs, sendo a maior parte do jogo feito"]},{"code":401,"indent":0,"parameters":["por uma pessoa, o jogo por enquanto vem só até aqui."]},{"code":401,"indent":0,"parameters":["Espero que entenda, divirta-se..."]},{"code":101,"indent":0,"parameters":["",0,2,1]},{"code":401,"indent":0,"parameters":["... quem sabe o jogo possa crescer, dependendo da nossa"]},{"code":401,"indent":0,"parameters":["recepção e do tempo que puder ser disposto no seu"]},{"code":401,"indent":0,"parameters":["desenvolvimento."]},{"code":401,"indent":0,"parameters":["Que a Força esteja com você..."]},{"code":0,"indent":0,"parameters":[]}],"name":"final","switchId":1,"trigger":0},
+{"id":2,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":3,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":4,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0}
+]
