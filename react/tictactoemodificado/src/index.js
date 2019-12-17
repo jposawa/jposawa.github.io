@@ -67,7 +67,9 @@ function Square(props)
         {
             history:[
             {
-                squares: Array(9).fill(null)
+                squares: Array(9).fill(null),
+                col: null,
+                row: null
             }],
             stepNumber: 0,
             xIsNext: true,
@@ -79,10 +81,24 @@ function Square(props)
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.length - 1];
         const squares = current.squares.slice();
+        let location = [0,0];
 
         if(calculateWinner(squares) || squares[i])
         {
             return;
+        }
+        location[0] = (i%3+1)
+        if(i < 3)
+        {
+            location[1] = 1;
+        }
+        else if(i < 6)
+        {
+            location[1] = 2;
+        }
+        else
+        {
+            location[1] = 3;
         }
         squares[i] = this.state.xIsNext ? 'X' : 'O'; //O MESMO QUE UM if PARA DETERMINAR SE É 'X' OU 'O'
         this.setState(
@@ -90,6 +106,8 @@ function Square(props)
             history: history.concat(
             [{
                 squares: squares,
+                col: location[0],
+                row: location[1],
             }]),
             stepNumber: history.length,
             xIsNext: !this.state.xIsNext //ALTERNA A BOOLEANA QUE DETERMINA ENTRE 'X' E 'O'
@@ -113,7 +131,7 @@ function Square(props)
       const moves = history.map((step, move) => 
       {
             const desc = move ?
-                'Go to move #' + move :
+                'Go to move #' + move + " (" + step.col + "," + step.row + ")" :
                 'Go to game start';
             return(
                 <li key={move}>
