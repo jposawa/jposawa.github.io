@@ -20,7 +20,11 @@ class Square extends React.Component {
 function Square(props)
 {
     return(
-        <button className = "square" onClick={props.onClick}>
+        <button 
+            className = "square"
+            onClick={props.onClick} 
+            style={{borderColor: props.vencedor ? "#933" : "#000", color: props.vencedor ? "#933" : "#000"}}
+        >
             {props.value}
         </button>
     );
@@ -28,8 +32,17 @@ function Square(props)
   
   class Board extends React.Component {
     renderSquare(i) {
+        let winning = false;
+        let indice = 0;
+        while(!winning && indice < this.props.vencedores.length)
+        {
+            if(this.props.vencedores[indice++] === i)
+                winning = true;
+        }
+
       return (
         <Square
+            vencedor={winning}
             value={this.props.squares[i]}
             onClick = {() => this.props.onClick(i)}
         />
@@ -120,6 +133,7 @@ function Square(props)
 
         if(calculateWinner(squares) || squares[i])
         {
+            //console.log(calculateWinner(squares));
             return;
         }
         location[0] = (i%3+1)
@@ -176,13 +190,17 @@ function Square(props)
       });
 
       let status;
+      let vencedores;
       if(winner)
       {
-          status = 'Winner: ' + winner;
+          console.log(winner);
+          vencedores = winner[1];
+          status = 'Winner: ' + winner[0];
       }
       else
       {
           status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+          vencedores = [];
       }
 
       return (
@@ -190,6 +208,7 @@ function Square(props)
           <div className="game-board">
             <Board
                 squares = {current.squares}
+                vencedores = {vencedores}
                 onClick = {(i) => this.handleClick(i)}
             />
 
@@ -228,7 +247,8 @@ function calculateWinner(squares)
         const [a, b, c] = lines[i];
         if(squares[a] && squares[a] === squares[b] && squares[a] === squares[c])
         {
-            return squares[a];
+            console.log(lines[i].length);
+            return [squares[a], lines[i]];
         }
     }
 
