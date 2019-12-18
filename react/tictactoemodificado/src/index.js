@@ -190,17 +190,26 @@ function Square(props)
             );
       });
 
+      let espacoVazio = current.squares.find((s) => {return s == null;}) === null; //USA O FIND() PARA PROCURAR SE EXISTE NULL E ENTÃO RETORN TRUE OU FALSE LOGO
+
+      console.log(espacoVazio);
+
       let status;
       let vencedores;
       if(winner)
       {
-          console.log(winner);
+          //console.log(winner);
           vencedores = winner[1];
           status = 'Winner: ' + winner[0];
       }
-      else
+      else if(espacoVazio)
       {
           status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+          vencedores = [];
+      }
+      else
+      {
+          status = "EMPATE";
           vencedores = [];
       }
 
