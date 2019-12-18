@@ -23,7 +23,7 @@ function Square(props)
         <button 
             className = "square"
             onClick={props.onClick} 
-            style={{borderColor: props.vencedor ? "#933" : "#000", color: props.vencedor ? "#933" : "#000"}}
+            style={{borderColor: props.vencedor ? props.corVencedor : "", color: props.vencedor ? props.corVencedor : ""}}
         >
             {props.value}
         </button>
@@ -42,6 +42,7 @@ function Square(props)
 
       return (
         <Square
+            corVencedor = "#369"
             vencedor={winning}
             value={this.props.squares[i]}
             onClick = {() => this.props.onClick(i)}
