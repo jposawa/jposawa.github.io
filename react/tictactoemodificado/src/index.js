@@ -35,11 +35,46 @@ function Square(props)
         />
       );
     }
+
+    renderRow(numCol, totalCol)
+    {
+        const squares = [];
+        const offset = numCol * totalCol;
+        
+        for(let n = 0; n < totalCol; n++)
+        {
+            squares.push(this.renderSquare(offset + n));
+        }
+        return(
+            <div className = "board-row">
+                {squares}
+            </div>
+        );
+    }
+
+    renderBoard(totalCol,totalRow)
+    {
+        const rows = [];
+        totalCol = parseInt(totalCol);
+        totalRow = parseInt(totalRow);
+
+        if(isNaN(totalCol) || isNaN(totalRow))
+        {
+            totalCol = 3;
+            totalRow = 3;
+        }
+        
+        for(let n = 0; n < totalRow; n++)
+        {
+            rows.push(this.renderRow(n, totalCol));
+        }
+
+        return <div>{rows}</div>;
+    }
   
     render() {
-        return (
-            <div>
-                <div className="board-row">
+        /*
+        <div className="board-row">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
                     {this.renderSquare(2)}
@@ -54,8 +89,8 @@ function Square(props)
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
                 </div>
-            </div>
-        );
+                */
+        return (this.renderBoard());
     }
   }
   
@@ -135,7 +170,7 @@ function Square(props)
                 'Go to game start';
             return(
                 <li key={move}>
-                    <button style = {{fontWeight: this.state.stepNumber == move ? 'bold' : 'normal'}} onClick={() => this.jumpTo(move)}>{desc}</button>
+                    <button style = {{fontWeight: this.state.stepNumber === move ? 'bold' : 'normal'}} onClick={() => this.jumpTo(move)}>{desc}</button>
                 </li>
             );
       });
